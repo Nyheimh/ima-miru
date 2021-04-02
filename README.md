@@ -16,6 +16,15 @@ const Show = new Schema(
   },
   { timestamps: true }
 )
+const User = new Schema(
+  {
+    username: { type: String, required: true },
+    email: { type: String, required: true },
+    isAdmin: {trype: String, required: true},
+    password_digest: { type: String, required: true }
+  },
+  { timestamps: true }
+)
 ```
 
 ## Component Diagram
