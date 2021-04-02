@@ -1,9 +1,12 @@
 import React from 'react'
+import Layout from '../../components/shared/Layout/Layout'
 
 const SignUp = () => {
     return (
         <div>
-            Sign up
+            <Layout>
+                Sign up
+            </Layout>
         </div>
     )
 }
