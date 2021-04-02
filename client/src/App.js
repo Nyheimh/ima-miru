@@ -14,28 +14,28 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route>
+        <Route path="/sign-up">
           <SignUp/>
-        </Route>
-        <Route>
+        </Route> 
+        <Route path="/sign-in">
           <SignIn/>
         </Route>
-        <Route>
+        <Route path="/sign-out">
           <SignOut/>
         </Route>
-        <Route>
+        <Route exact path="/">
           <Home/>
         </Route>
-        <Route>
+        <Route exact path="/shows">
           <AllShows/>
         </Route>
-        <Route>
+        <Route exact path="/shows/:id">
           <ShowDetail/>
         </Route>
-        <Route>
+        <Route path="/create-show">
           <CreateShow/>
         </Route>
-        <Route>
+        <Route exact path="/shows/:id/edit">
           <EditShow/>
         </Route>
       </Switch>
