@@ -1,14 +1,15 @@
 import React from 'react'
 import Layout from '../../components/shared/Layout/Layout'
-import { getShow } from '../../services/shows'
+import { getShow, deleteShow } from '../../services/shows'
 import {useState, useEffect} from "react"
-import {useParams, Link} from "react-router-dom"
+import {useParams, Link, useHistory} from "react-router-dom"
 
 const ShowDetail = () => {
 
     const [show, setShow] = useState(null)
     const [isLoaded, setLoaded] = useState(false)
     const { id } = useParams()
+    const history = useHistory();
 
     useEffect(() => {
         const fetchShow = async () => {
@@ -18,10 +19,18 @@ const ShowDetail = () => {
         }
         fetchShow()
     }, [id])
+  
+  const handleDelete = (e) => {
+    e.preventDefault();
+    deleteShow(show._id)
+    history.push("/shows")
+    }
 
     if (!isLoaded) {
         return <h1>Loading...</h1>
     }
+  
+    
 
     return (
         <div>
@@ -34,7 +43,8 @@ const ShowDetail = () => {
                     <div className="plot">{show.plot}</div>
                     <div className="button-container">
                         <button className="edit-button"><Link className="edit-link" to={`/shows/${show._id}/edit`}>Edit</Link></button>
-                    </div>
+                        <button className="delete-button" onClick = {handleDelete}>Delete</button>
+              </div>
                 </div>
 
             </div>
