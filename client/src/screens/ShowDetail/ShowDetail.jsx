@@ -30,11 +30,13 @@ const ShowDetail = () => {
                 <img className="show-detail-image" src={show.imgURL} alt={show.title} />
                 <div className="detail">
                     <div className="title">{show.title}</div>
-                    <div className="duration">{`$${show.duration}`}</div>
+                    <div className="duration">{`${show.duration}`}</div>
                     <div className="plot">{show.plot}</div>
                     <div className="button-container">
+                        <button className="edit-button"><Link className="edit-link" to={`/shows/${show._id}/edit`}>Edit</Link></button>
                     </div>
                 </div>
+
             </div>
             </Layout>
         </div>
