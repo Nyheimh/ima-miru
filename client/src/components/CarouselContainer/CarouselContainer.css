@@ -1,0 +1,17 @@
+.carousel {
+  margin: 0 auto; 
+  width: 25%!important;
+  color: black;
+
+}
+
+img {
+
+  height: 75vh;
+  /* height: 25%!important; */
+}
+
+h3,
+p {
+  color: black;
+}
