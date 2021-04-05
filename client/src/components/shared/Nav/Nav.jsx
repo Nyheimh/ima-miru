@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 
 const authenticatedOptions = (
   <>
-    <NavLink className="link" to="/add-product">
-      Add Product
+    <NavLink className="link" to="/add-show">
+      Add Show
     </NavLink>
     <NavLink className="link" to="/sign-out">
       Sign Out
