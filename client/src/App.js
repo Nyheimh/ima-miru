@@ -10,6 +10,8 @@ import { Route, Switch, Redirect } from 'react-router-dom'
 import { verifyUser } from './services/users'
 import './App.css';
 import {useState, useEffect} from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+ 
 
 function App() {
   const [user, setUser] = useState(null)
