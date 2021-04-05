@@ -26,7 +26,7 @@ const main = async () => {
             "imgURL": "https://i.pinimg.com/originals/31/7f/fd/317ffdfd07542eb695117161b1c753c9.jpg"
         },
         {
-            "title": "Naruto Shippuden",
+            "title": "Naruto",
             "duration": "2007-2017",
             "plot": "Naruto Uzumaki, is a loud, hyperactive, adolescent ninja who constantly searches for approval and recognition, as well as to become Hokage, who is acknowledged as the leader and strongest of all ninja in the village.",
             "imgURL": "https://cdn11.bigcommerce.com/s-b72t4x/images/stencil/1280x1280/products/11169/20874/24_1075_Naruto_Group__97803.1415650378.jpg?c=2"

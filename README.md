@@ -9,6 +9,11 @@ Ima Miru (translates to "watch now") is an application where users can browse va
 
 [Team expectations](https://docs.google.com/document/d/1-BP6pJGGFY257Gr6nUtwKtcV-lZshNnJbscVe1zi6fA/edit?usp=sharing)
 
+## Visual
+
+https://xd.adobe.com/view/12f54b28-3956-4d8e-8a20-6ec7453fbc7f-47a6/
+
+
 ## Schema
 
 ``` 
@@ -38,8 +43,8 @@ const User = new Schema(
 | -------- | ------------------------------------------ | -------- |
 | April 1  | Proposal / Design      | Complete |
 | April 2  | Back-end with full CRUD/ Authentication | Complete |
-| April 3 - 4  |  Discuss Briefly          | Incomplete |
-| April 5   | Finish Back-end, Link to Front-end       | Incomplete |
+| April 3 - 4  |  Discuss Briefly          | Complete |
+| April 5   | Finish Back-end, Link to Front-end       | Complete |
 | April 6   | Finish Front-End / CSS / MVP DONE                      | Incomplete |
 | April 7   | Finish CSS / Post MVP                            | Incomplete |
 | April 8 | Post MVP / Final touches 12pm EST                   | Incomplete |
@@ -72,14 +77,14 @@ Nyheim: Back-end understanding, Authentication 
 ## MVP
 
 - Teamwork
-- React Client (Front End) w/ at least 6 components
-- Server Back End with full CRUD
-- Authentication
+- React Client (Front End) w/ at least 6 components ✔️
+- Server Back End with full CRUD ✔️
+- Authentication ✔️
 - Styled with CSS (Flexbox and Grid)
 - Media Queries for desktop and mobile
 - Linting
 - Deploy front end to Netlify
-- Deploy front end to Heroku
+- Deploy back end to Heroku ✔️
 
 ## Post MVP
 
