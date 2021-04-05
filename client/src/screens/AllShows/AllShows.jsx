@@ -5,7 +5,7 @@ import Show from '../../components/Show/Show'
 import {useState, useEffect} from 'react'
 import { getShows } from '../../services/shows'
 
-const AllShows = () => {
+const AllShows = ({user}) => {
 
 const [allShows, setAllShows] = useState([])
 const [queriedShows, setQueriedShows] = useState([])
@@ -26,7 +26,7 @@ const [queriedShows, setQueriedShows] = useState([])
 
     return (
         <div>  
-            <Layout>
+            <Layout user = {user}>
                 All Shows
                 <Search />
                 <div className="shows">
