@@ -78,13 +78,13 @@ Nyheim: Back-end understanding, Authentication 
 
 - Teamwork
 - React Client (Front End) w/ at least 6 components ✔️
+- Deploy back end to Heroku ✔️
 - Server Back End with full CRUD ✔️
 - Authentication ✔️
+- Deploy front end to Netlify
 - Styled with CSS (Flexbox and Grid)
 - Media Queries for desktop and mobile
 - Linting
-- Deploy front end to Netlify
-- Deploy back end to Heroku ✔️
 
 ## Post MVP
 
