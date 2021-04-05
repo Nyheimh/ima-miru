@@ -2,10 +2,10 @@ import React from 'react'
 import Layout from '../../components/shared/Layout/Layout'
 import Carousel from '../../components/Carousel/Carousel'
 
-const Home = () => {
+const Home = ({user}) => {
     return (
         <div>
-            <Layout>
+            <Layout user={user}>
                 Home
                 <Carousel/>
             </Layout>
