@@ -8,7 +8,6 @@ p {
 
 img {
   height: 75vh;
-  /* height: 25%!important; */
 }
 
 /*---------------CLASS---------------*/
@@ -16,10 +15,9 @@ img {
 .carousel {
   margin: 5px auto; 
   width: 80%;
-  height: auto;
-  /* height: 50vh; */
+  /* height: auto; */
+  height: 200px;
   color: black;
-
 }
 
 /*---------------IDs---------------*/

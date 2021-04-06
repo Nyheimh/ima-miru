@@ -1,26 +1,26 @@
 import React, {useState, useEffect} from 'react'
 import Layout from '../../components/shared/Layout/Layout'
 import CarouselContainer from '../../components/CarouselContainer/CarouselContainer'
-import { getShows } from '../../services/shows'
+import { getHome } from '../../services/shows'
 
 const Home = ({user}) => {
-//     const [allShows, setAllShows] = useState([])
+    const [allShows, setAllShows] = useState([])
 
-// useEffect(() => {
-//     const fetchShows = async () => {
-//       const shows = await getShows()
-//       setAllShows(shows)
-//     }
-//     fetchShows()
-//   }, [])
+useEffect(() => {
+    const fetchShows = async () => {
+      const shows = await getHome()
+      setAllShows(shows)
+    }
+    fetchShows()
+  }, [])
 
-// console.log(allShows)
+console.log(allShows)
 
     return (
         <div>
             <Layout user={user}>
-                {/* <CarouselContainer allShows={allShows}/> */}
-                <CarouselContainer/>
+                {allShows && < CarouselContainer allShows={allShows}/>}
+                {/* <CarouselContainer/> */}
 
             </Layout>
         </div>
