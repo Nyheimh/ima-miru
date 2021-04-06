@@ -1,0 +1,49 @@
+
+/*---------------TAGS---------------*/
+
+
+
+/*---------------CLASS---------------*/
+
+.appName {
+    margin: auto 0;
+    margin-left: 10px;
+    font-size: 50px;
+}
+
+.authorized {
+    display: block;
+}
+
+.links {
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.userWelcome {
+    padding-left: 250px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+    background-color: black;
+    opacity: 0.6;
+    color: white;
+}
+
+.nav a {
+    color: white;
+}
+
+.navOptions {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*---------------IDs---------------*/
+
+
+
+/*---------------Media Queries---------------*/

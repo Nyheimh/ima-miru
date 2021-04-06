@@ -1,3 +1,18 @@
+
+/*---------------TAGS---------------*/
+
+h3,
+p {
+  color: black;
+}
+
+img {
+  height: 75vh;
+  /* height: 25%!important; */
+}
+
+/*---------------CLASS---------------*/
+
 .carousel {
   margin: 0 auto; 
   width: 25%!important;
@@ -5,13 +20,10 @@
 
 }
 
-img {
+/*---------------IDs---------------*/
 
-  height: 75vh;
-  /* height: 25%!important; */
-}
 
-h3,
-p {
-  color: black;
-}
+
+/*---------------Media Queries---------------*/
+
+
