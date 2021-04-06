@@ -6,19 +6,22 @@
 /*---------------CLASS---------------*/
 
 .nav {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: columns;
-    padding: 10px 50px;
+    display: block;
+    /* justify-content: space-between; */
+    /* flex-direction: rows; */
+    padding: 10px 20px;
     background-color: black;
     opacity: 0.6;
     color: white;
 }
 
 .links {
+    display: inline;
     font-size: 17px;
     margin:  auto 0;
-    width: 35%;
+    margin-left: 20px;
+    width: 100%;
+    /* width: 65%; */
 }
 
 .userWelcome {
@@ -36,11 +39,15 @@
     color: white;
 }
 
+.links a {
+    display: inline;
+}
+
 /*---------------IDs---------------*/
 
 #appName {
     margin-left: 20px;
-    font-size: 50px;
+    font-size: 30px;
 }
 
 
