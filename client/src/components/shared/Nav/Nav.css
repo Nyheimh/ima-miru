@@ -8,16 +8,12 @@
 .appName {
     margin: auto 0;
     margin-left: 10px;
-    font-size: 50px;
-}
-
-.authorized {
-    display: block;
+    font-size: 40px;
 }
 
 .links {
-    margin-right: 10px;
-    font-size: 25px;
+    margin-right: 15px;
+    font-size: 17px;
 }
 
 .userWelcome {
@@ -27,6 +23,7 @@
 .nav {
     display: flex;
     justify-content: space-between;
+    flex-direction: columns;
     padding: 10px 0px;
     background-color: black;
     opacity: 0.6;
@@ -40,34 +37,43 @@
 .navOptions {
     display: flex;
     justify-content: space-between;
+    margin-left: 10px;
 }
 
 /*---------------IDs---------------*/
 
 
 
-/*---------------Media Queries iPHONE---------------*/
+/*---------------Media Queries iPad---------------*/
 
-@media only screen and (max-width: 375px) {
-    
-}
-
-/*---------------Media Queries iPAD---------------*/
-
-@media only screen and (max-width: 602px) {
+@media only screen and (min-width: 602px) {
 
     .appName {
-        font-size: 40px;
+        font-size: 55px;
+    }
+    
+    .links {
+        font-size: 25px;
+    }
+
+}
+
+/*---------------Media Queries Desktop---------------*/
+
+@media only screen and (min-width: 1025px) {
+
+    .appName {
+        margin: auto 0;
+        margin-left: 10px;
+        font-size: 55px;
     }
 
     .links {
-        font-size: 15px;
+        font-size: 27px;
     }
 
-    .navOptions {
-        /* display: flex; */
-        justify-content: space-around;
+    .userWelcome {
+        padding-left: 250px;
     }
 
 }
-
