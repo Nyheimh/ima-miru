@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { signIn } from "../../services/users";
 import { useHistory } from "react-router-dom";
-import Layout from "../../components/shared/Layout/Layout";
 import { Button, Form } from "react-bootstrap";
+import Layout from "../../components/shared/Layout/Layout";
 import "./SignIn.css";
 
 const SignIn = (props) => {
@@ -48,9 +48,9 @@ const SignIn = (props) => {
     if (form.isError) {
       return (
         <button type="submit" className={toggleForm}>
-            <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit">
             {form.errorMsg}
-            </Button>
+          </Button>
         </button>
       );
     } else {

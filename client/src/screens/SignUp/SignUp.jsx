@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { signUp, signIn } from "../../services/users";
-import Layout from "../../components/shared/Layout/Layout";
 import { Form, Button } from "react-bootstrap";
+import Layout from "../../components/shared/Layout/Layout";
 import "./SignUp.css";
 
 const SignUp = (props) => {
@@ -59,7 +59,7 @@ const SignUp = (props) => {
   const { email, username, password, passwordConfirmation } = form;
 
   return (
-    <Layout>
+    <Layout user={props.user}>
       <Form className="signUp-form-container" onSubmit={onSignUp}>
         <h2>Create your account below!</h2>
         <Form.Group controlId="formBasicEmail">
@@ -115,45 +115,3 @@ const SignUp = (props) => {
 export default SignUp;
 
 //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImlybXoiLCJlbWFpbCI6ImlybXpAZ21haWwuY29tIiwiaWF0IjoxNjE3NjM1MjE0fQ.dFcRIKD4hx0eGOHtdjIgItxcHXtsI1ZprN--9q0sB5E
-// <div className="form-container">
-// <h3>Sign Up</h3>
-// <form onSubmit={onSignUp}>
-//   <label>Username</label>
-//   <input
-//     required
-//     type="text"
-//     name="username"
-//     value={username}
-//     placeholder="Enter username"
-//     onChange={handleChange}
-//   />
-//   <label>Email address</label>
-//   <input
-//     required
-//     type="email"
-//     name="email"
-//     value={email}
-//     placeholder="Enter email"
-//     onChange={handleChange}
-//   />
-//   <label>Password</label>
-//   <input
-//     required
-//     name="password"
-//     value={password}
-//     type="password"
-//     placeholder="Password"
-//     onChange={handleChange}
-//   />
-//   <label>Password Confirmation</label>
-//   <input
-//     required
-//     name="passwordConfirmation"
-//     value={passwordConfirmation}
-//     type="password"
-//     placeholder="Confirm Password"
-//     onChange={handleChange}
-//   />
-//   {renderError()}
-// </form>
-// </div>
