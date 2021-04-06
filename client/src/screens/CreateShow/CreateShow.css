@@ -1,8 +1,61 @@
+/* *-----------------------------Tags-----------------------------* */
+
 /* *-----------------------------Classes-----------------------------* */
-.createShow-form-container {
+.create-show-form-container {
   width: 50vw;
   height: fit-content;
   padding: 15px 70px;
-  margin: 200px auto;
-  background-color: lightcyan;
+  margin: 100px auto;
+  background-color: rgba(153, 178, 234, .7);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.add-series {
+  color: white;
+}
+.form-control {
+  margin: 15px auto;
+  width: fit-content;
+}
+
+#formGroupExampleInput {
+  width: 80%;
+  border-radius: none;
+  /* margin: 0 auto; */
+}
+#exampleFormControlTextarea1 {
+  width: 80%;
+}
+/* *-----------------------------IDs-----------------------------* */
+#add-button {
+  background-color: #0B4779;
+  width: fit-content;
+  margin: 15px auto;
+}
+
+
+/* *-----------------------------MQs-----------------------------* */
+@media only screen and (max-width : 375px) {
+.create-show-form-container {
+  width: 70vw;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: none;
+}
+.form-control {
+  margin: 5px;
+}
+#formGroupExampleInput {
+  width: 80%;
+  border-radius: none;
+}
+#exampleFormControlTextarea1 {
+  width: 80%;
+  border-radius: none;
+}
 }
