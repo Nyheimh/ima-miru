@@ -4,7 +4,6 @@
   padding:10px;
  color:white;
  
- 
 
 }
 
@@ -13,8 +12,6 @@
   padding:0;
   margin: 10px;
   opacity: 0.9;
-  width: 20%;
-  height:20%
   
 }
 .product:hover{
@@ -23,7 +20,8 @@
   box-shadow: 0 0 3px 1px black;
 }
 .product img{
-  min-width: 100%;
+  
+  width: 200px;
   height: auto;
   max-height: 200px;
 }
