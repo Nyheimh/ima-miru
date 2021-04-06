@@ -14,9 +14,12 @@ const Footer = () => {
             </p> */}
           </MDBCol>
           <MDBCol md="6">
-            <ul>
-                <a href="https://github.com/Nyheimh">
-                  Nyheim Github</a>
+              <ul>
+              <li className="list-unstyled">
+                <a href="https://github.com/Nyheimh">Github</a>
+                  {/* <a href="https://github.com/Nyheimh" className="icons-sm fb-ic ml-1"> */}
+                  {/* <MDBIcon fab icon="github" /></a> */}
+                  </li>
               <li className="list-unstyled">
                 <a href="#!">Irma Github</a>
               </li>

@@ -1,21 +1,29 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import { getShow, deleteShow } from "../../services/shows";
-import { useState, useEffect } from "react";
 import { useParams, Link, useHistory } from "react-router-dom";
+import {
+  MDBCard,
+  MDBCardBody,
+  MDBCardImage,
+  MDBCardTitle,
+  MDBCardText,
+  MDBRow,
+  MDBCol,
+} from "mdbreact";
 import "./ShowDetail.css";
 
-const ShowDetail = () => {
+function ShowDetail({ user }) {
+  const [isLoaded, setIsLoaded] = useState(false);
   const [show, setShow] = useState(null);
-  const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
   const history = useHistory();
 
   useEffect(() => {
     const fetchShow = async () => {
-      const show = await getShow(id);
-      setShow(show);
-      setLoaded(true);
+      const anime = await getShow(id);
+      setShow(anime);
+      setIsLoaded(true);
     };
     fetchShow();
   }, [id]);
@@ -32,35 +40,57 @@ const ShowDetail = () => {
 
   return (
     <div>
-      <Layout>
-        <div className="show-detail">
-          <img
-            className="show-detail-image"
-            src={show.imgURL}
-            alt={show.title}
-          />
-          <div className="detail">
-            <div className="title">{show.title}</div>
-            <div className="duration">({`${show.duration}`})</div>
-            <div className="plot">
-              <p className="summary"><strong>Summary:</strong></p> {show.plot}
-            </div>
-            <div className="button-container">
-              <button className="edit-button">
-                <Link className="edit-link" to={`/shows/${show._id}/edit`}>
-                  Edit
-                </Link>
-              </button>
-              <button className="delete-button" onClick={handleDelete}>
-                Delete
-              </button>
+      <Layout user={user}>
+        <>
+          <div class="card mb-3">
+            <img class="card-img-top" src={show.imgURL} alt={show.title} />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
             </div>
           </div>
+        </>
+        <div className="button-container">
+          <button className="edit-button">
+            <Link className="edit-link" to={`/shows/${show._id}/edit`}>
+              Edit
+            </Link>
+          </button>
+          <button className="delete-button" onClick={handleDelete}>
+            Delete
+          </button>
         </div>
       </Layout>
     </div>
   );
-};
+}
 
 export default ShowDetail;
-
+{
+  /* <MDBRow>
+  <MDBCol style={{ maxWidth: "40rem" }}>
+    <MDBCard reverse>
+      <MDBCardImage
+        // cascade
+        // style={{ height: '20rem' }}
+        src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+        // alt={show.title}
+      />
+      <MDBCardBody cascade className="text-center">
+        <MDBCardTitle>{show.title}</MDBCardTitle>
+        <h5 className="indigo-text">
+          <strong>({`${show.duration}`})</strong>
+        </h5>
+        <MDBCardText>{show.plot}</MDBCardText>
+      </MDBCardBody>
+    </MDBCard>
+  </MDBCol>
+</MDBRow> */
+}
