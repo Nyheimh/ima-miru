@@ -1,45 +1,43 @@
-import React from 'react'
-
-import './Footer.css'
+import React from "react";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon } from "mdbreact";
 
 const Footer = () => {
   return (
-      
-    <div></div>
-      // <footer class="text-center text-white" style="background-color: #f1f1f1;">
-      // <div class="container pt-4">
-      //   <section class="mb-4">
-      //     <a
-      //       class="btn btn-link btn-floating btn-lg text-dark m-1"
-      //       href="#!"
-      //       role="button"
-      //       data-mdb-ripple-color="dark"
-      //       ><i class="fab fa-twitter"></i
-      //     ></a>
-      //     {/* <!-- Linkedin --> */}
-      //     <a
-      //       class="btn btn-link btn-floating btn-lg text-dark m-1"
-      //       href="#!"
-      //       role="button"
-      //       data-mdb-ripple-color="dark"
-      //       ><i class="fab fa-linkedin"></i
-      //     ></a>
-      //     {/* <!-- Github --> */}
-      //     <a
-      //       class="btn btn-link btn-floating btn-lg text-dark m-1"
-      //       href="#!"
-      //       role="button"
-      //       data-mdb-ripple-color="dark"
-      //       ><i class="fab fa-github"></i
-      //     ></a>
-      //   </section>
-      // </div>
-      // <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      //   © 2020 Copyright:Ima Miru
-      //   <a class="text-dark" href="https://github.com/Jordanm96/ima-miru">Github</a>
-      // </div>
-    // </footer>
-    )
+    <div clasName="footer">
+    <MDBFooter className="font-small pt-4 mt-4">
+      <MDBContainer fluid className="text-center text-md-left">
+        <MDBRow>
+          <MDBCol md="6">
+            {/* <p>
+              Here you can use rows and columns here to organize your footer
+              content.
+            </p> */}
+          </MDBCol>
+          <MDBCol md="6">
+            <ul>
+                <a href="https://github.com/Nyheimh">
+                  Nyheim Github</a>
+              <li className="list-unstyled">
+                <a href="#!">Irma Github</a>
+              </li>
+              <li className="list-unstyled">
+                <a href="#!">Andri Github</a>
+              </li>
+              <li className="list-unstyled">
+                <a href="https://github.com/Jordanm96">Jordan Github</a>
+              </li>
+            </ul>
+          </MDBCol>
+        </MDBRow>
+      </MDBContainer>
+      <div className="footer-copyright text-center py-3">
+        <MDBContainer fluid>
+          &copy; {new Date().getFullYear()} Copyright: <a href="https://github.com/Jordanm96/ima-miru"> Ima Miru </a>
+        </MDBContainer>
+      </div>
+    </MDBFooter>
+    </div>
+  );
 }
 
-export default Footer
+export default Footer;
