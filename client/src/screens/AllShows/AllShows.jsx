@@ -4,6 +4,7 @@ import Search from '../../components/Search/Search'
 import Show from '../../components/Show/Show'
 import {useState, useEffect} from 'react'
 import { getShows } from '../../services/shows'
+import "./AllShows.css"
 
 const AllShows = ({user}) => {
 
@@ -29,8 +30,10 @@ const [queriedShows, setQueriedShows] = useState([])
             <Layout user = {user}>
                 All Shows
                 <Search />
-                <div className="shows">
-                   {showJSX}
+          <div className="shows">
+            
+              {showJSX}
+             
                 </div>
             </Layout>
         </div>
