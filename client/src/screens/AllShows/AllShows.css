@@ -1,0 +1,25 @@
+
+.shows{
+  display: flex;
+ grid-template-columns: auto;
+ flex-wrap: wrap;
+  font-size: 20px;
+  text-align: center;
+  font-family: fantasy; 
+  justify-content: space-evenly;
+  transform: scale(1.02);
+  opacity: 0.9;
+  letter-spacing: .1px;
+  
+}
+.product{
+  border: solid black 1px;
+  padding:0;
+  margin: 10px;
+}
+.product img{
+  min-width: 100%;
+  height: auto;
+  max-height: 200px;
+}
+
