@@ -4,6 +4,7 @@ import { createShow } from "../../services/shows";
 import { Button, Form } from "react-bootstrap";
 import Layout from "../../components/shared/Layout/Layout";
 import "./CreateShow.css";
+import FormCheckInput from "react-bootstrap/esm/FormCheckInput";
 
 const CreateShow = ({ user }) => {
   const [show, setShow] = useState({
@@ -34,52 +35,51 @@ const CreateShow = ({ user }) => {
   }
   return (
     <Layout user={user}>
-      <Form className="createShow-form-container" onSubmit={handleSubmit}>
-        <h2>Add your favorite anime series here!</h2>
-        <Form.Group>
-          <Form.Control
-            className="input-title"
-            placeholder="Title"
-            value={show.title}
-            name="title"
-            required
-            autoFocus
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Group>
-          <Form.Control
-            className="input-duration"
-            placeholder="Duration"
-            value={show.duration}
-            name="duration"
-            required
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Group>
-          <Form.Control
-            className="input-image-link"
-            placeholder="Image Address URL"
-            value={show.imgURL}
-            name="imgURL"
-            required
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Group>
-          <Form.Control
-            className="textarea-plot"
-            // rows={10}
-            // type="text-area"
-            placeholder="Plot"
-            value={show.plot}
-            name="plot"
-            required
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Button type="submit" className="submit-button">
+      <Form className="create-show-form-container" onSubmit={handleSubmit}>
+        <h2 className="add-series">Add your favorite anime series here!</h2>
+        <input
+          type="text"
+          className="form-control"
+          id="formGroupExampleInput"
+          placeholder="Title"
+          value={show.title}
+          required
+          autoFocus
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          className="form-control"
+          id="formGroupExampleInput"
+          placeholder="Duration"
+          value={show.duration}
+          name="duration"
+          required
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          className="form-control"
+          id="formGroupExampleInput"
+          placeholder="Image URL"
+          value={show.imgURL}
+          name="imgURL"
+          required
+          onChange={handleChange}
+        />
+        <textarea
+          className="form-control"
+          id="exampleFormControlTextarea1"
+          rows="5"
+          // rows={10}
+          type="text-area"
+          placeholder="Plot Summary"
+          value={show.plot}
+          name="plot"
+          required
+          onChange={handleChange}
+        />
+        <Button type="submit" id="add-button">
           Add
         </Button>
       </Form>
