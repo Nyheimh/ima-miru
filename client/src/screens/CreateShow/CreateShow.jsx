@@ -4,7 +4,6 @@ import { createShow } from "../../services/shows";
 import { Button, Form } from "react-bootstrap";
 import Layout from "../../components/shared/Layout/Layout";
 import "./CreateShow.css";
-import FormCheckInput from "react-bootstrap/esm/FormCheckInput";
 
 const CreateShow = ({ user }) => {
   const [show, setShow] = useState({
