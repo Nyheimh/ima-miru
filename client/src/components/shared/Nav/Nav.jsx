@@ -4,43 +4,47 @@ import { NavLink } from "react-router-dom";
 
 const authenticatedOptions = (
   <>
-    <NavLink className="link" to="/create-show">
+    <NavLink to="/create-show">
       Add Show
     </NavLink>
-    <NavLink className="link" to="/sign-out">
+    <NavLink to="/sign-out">
       Sign Out
     </NavLink>
   </>
 );
 const unauthenticatedOptions = (
-  <>
-    <NavLink className="link" to="/sign-up">
+  <div className="unauthOptions">
+    <NavLink  to="/sign-up">
       Sign Up
     </NavLink>
-    <NavLink className="link" to="/sign-in">
+    <NavLink to="/sign-in">
       Sign In
     </NavLink>
-  </>
+  </div>
 );
 const alwaysOptions = (
-  <>
-    <NavLink className="link" to="/shows">
+  <div className="alwaysOptions">
+    <NavLink to="/shows">
       All Shows
     </NavLink>
-  </>
+  </div>
 );
 
 const Nav = ({ user }) => {
   return (
     <nav>
       <div className="nav">
-        <NavLink className="logo" to="/">
+        <NavLink className="appName" to="/">
           Ima Miru
         </NavLink>
         <div className="links">
-          {user && <div className="link welcome">Welcome, {user.username}</div>}
-          {alwaysOptions}
-          {user ? authenticatedOptions : unauthenticatedOptions}
+          <div className="authorized">
+            {user && <div className="userWelcome">Welcome, {user.username}</div>}
+              <div className="navOptions">
+                {alwaysOptions}
+                {user ? authenticatedOptions : unauthenticatedOptions}
+              </div>
+            </div>
         </div>
       </div>
     </nav>
