@@ -17,7 +17,9 @@
 }
 
 .userWelcome {
-    padding-left: 250px;
+    padding-left: 200px;
+    justify-content: right;
+    margin-right: 1px;
 }
 
 .nav {

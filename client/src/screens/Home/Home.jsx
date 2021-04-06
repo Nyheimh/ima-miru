@@ -6,7 +6,6 @@ const Home = ({user}) => {
     return (
         <div>
             <Layout user={user}>
-                Home
                 <CarouselContainer/>
             </Layout>
         </div>

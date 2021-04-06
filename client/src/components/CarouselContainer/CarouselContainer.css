@@ -14,8 +14,9 @@ img {
 /*---------------CLASS---------------*/
 
 .carousel {
-  margin: 0 auto; 
-  width: 25%!important;
+  margin: 5px auto; 
+  width: 80%;
+  height: auto;
   color: black;
 
 }
@@ -24,6 +25,32 @@ img {
 
 
 
-/*---------------Media Queries---------------*/
+/*---------------Media Queries iPad---------------*/
 
+@media only screen and (min-width: 900px) {
 
+  .carousel {
+    width: 50%;
+  }
+  
+}
+
+/*---------------Media Queries Desktop---------------*/
+
+@media only screen and (min-width: 1050px) {
+
+  .carousel {
+    width: 40%;
+  }
+  
+}
+
+/*---------------Media Queries LargeDesktop---------------*/
+
+@media only screen and (min-width: 1200px) {
+
+  .carousel {
+    width: 35%;
+  }
+  
+}
