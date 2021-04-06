@@ -4,18 +4,36 @@ import './CarouselContainer.css'
 // import { Link } from 'react-router-dom'
 
 
-const CarouselContainer = () => {
+const CarouselContainer = ({allShows}) => {
+
+  console.log(allShows)
+
     return (
       <Carousel className="carousel">
-        <Carousel.Item >
+        {allShows.map(show => {
+          {console.log(show.imgURL)}
+          <Carousel.Item>
+            <img
+              className="carouselImg"
+              src={show.imgURL}
+              alt={show.title}
+              />
+            <Carousel.Caption>
+              {/* <h3>Boys Over Flowers</h3> */}
+              {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
+            </Carousel.Caption>
+          </Carousel.Item>
+        })}
+
+        {/* <Carousel.Item >
         <img
           className="d-block w-100"
           src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Ffilmdaily.co%2Fwp-content%2Fuploads%2F2020%2F10%2Fboys-over-flowers-anime_lede.jpg"
           alt="First slide"
           />
         <Carousel.Caption>
-          {/* <h3>Boys Over Flowers</h3> */}
-          {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
+          {/* <h3>Boys Over Flowers</h3> 
+          {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> 
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -25,8 +43,8 @@ const CarouselContainer = () => {
           alt="Second slide"
         />
         <Carousel.Caption>
-          {/* <h3>Hunter x Hunter</h3> */}
-          {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
+          {/* <h3>Hunter x Hunter</h3> 
+          {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -36,8 +54,8 @@ const CarouselContainer = () => {
           alt="Third slide"
         />
         <Carousel.Caption>
-          {/* <h3>Dragon Ball Z</h3> */}
-          {/* <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
+          {/* <h3>Dragon Ball Z</h3> 
+          {/* <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> 
         </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -47,10 +65,10 @@ const CarouselContainer = () => {
           alt="Fourth slide"
         />
         <Carousel.Caption>
-          {/* <h3>Naruto</h3> */}
-          {/* <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
+          {/* <h3>Naruto</h3> 
+          {/* <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> 
         </Carousel.Caption>
-      </Carousel.Item>
+      </Carousel.Item> */}
     </Carousel>
     )
 }

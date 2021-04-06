@@ -16,7 +16,8 @@ img {
 .carousel {
   margin: 5px auto; 
   width: 80%;
-  height: auto;
+  /* height: auto; */
+  height: 50vh;
   color: black;
 
 }
