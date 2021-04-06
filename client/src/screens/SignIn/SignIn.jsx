@@ -48,11 +48,13 @@ const SignIn = (props) => {
     if (form.isError) {
       return (
         <button type="submit" className={toggleForm}>
-          {form.errorMsg}
+            <Button variant="primary" type="submit">
+            {form.errorMsg}
+            </Button>
         </button>
       );
     } else {
-      return <button type="submit">Sign In</button>;
+      return <Button type="submit">Sign In</Button>;
     }
   };
 
@@ -84,9 +86,7 @@ const SignIn = (props) => {
             onChange={handleChange}
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
-          Sign In
-        </Button>
+        {renderError()}
       </Form>
     </Layout>
   );

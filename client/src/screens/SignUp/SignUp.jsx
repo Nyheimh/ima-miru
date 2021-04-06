@@ -47,12 +47,12 @@ const SignUp = (props) => {
     const toggleForm = form.isError ? "danger" : "";
     if (form.isError) {
       return (
-        <button type="submit" className={toggleForm}>
+        <Button type="submit" className={toggleForm}>
           {form.errorMsg}
-        </button>
+        </Button>
       );
     } else {
-      return <button type="submit">Sign Up</button>;
+      return <Button type="submit">Sign Up</Button>;
     }
   };
 
@@ -106,9 +106,7 @@ const SignUp = (props) => {
             onChange={handleChange}
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
-          Sign Up
-        </Button>
+        {renderError()}
       </Form>
     </Layout>
   );
