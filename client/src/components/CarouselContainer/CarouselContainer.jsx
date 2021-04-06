@@ -5,8 +5,26 @@ import './CarouselContainer.css'
 
 
 const CarouselContainer = () => {
+
+  // console.log(allShows)
+
     return (
       <Carousel className="carousel">
+        {/* {allShows.map(show => {
+          {console.log(show.imgURL)}
+          <Carousel.Item>
+            <img
+              className="carouselImg"
+              src={show.imgURL}
+              alt={show.title}
+              />
+            <Carousel.Caption>
+              {/* <h3>Boys Over Flowers</h3>
+              {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        })} */}
+
         <Carousel.Item >
         <img
           className="d-block w-100"

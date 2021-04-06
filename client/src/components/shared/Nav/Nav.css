@@ -1,0 +1,81 @@
+
+/*---------------TAGS---------------*/
+
+
+
+/*---------------CLASS---------------*/
+
+.appName {
+    margin: auto 0;
+    margin-left: 10px;
+    font-size: 40px;
+}
+
+.links {
+    margin-right: 15px;
+    font-size: 17px;
+}
+
+.userWelcome {
+    padding-left: 200px;
+    justify-content: right;
+    margin-right: 1px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: columns;
+    padding: 10px 0px;
+    background-color: black;
+    opacity: 0.6;
+    color: white;
+}
+
+.nav a {
+    color: white;
+}
+
+.navOptions {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+/*---------------IDs---------------*/
+
+
+
+/*---------------Media Queries iPad---------------*/
+
+@media only screen and (min-width: 602px) {
+
+    .appName {
+        font-size: 55px;
+    }
+    
+    .links {
+        font-size: 25px;
+    }
+
+}
+
+/*---------------Media Queries Desktop---------------*/
+
+@media only screen and (min-width: 1025px) {
+
+    .appName {
+        margin: auto 0;
+        margin-left: 10px;
+        font-size: 55px;
+    }
+
+    .links {
+        font-size: 27px;
+    }
+
+    .userWelcome {
+        padding-left: 250px;
+    }
+
+}
