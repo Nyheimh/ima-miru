@@ -46,4 +46,28 @@
 
 
 
-/*---------------Media Queries---------------*/
+/*---------------Media Queries iPHONE---------------*/
+
+@media only screen and (max-width: 375px) {
+    
+}
+
+/*---------------Media Queries iPAD---------------*/
+
+@media only screen and (max-width: 602px) {
+
+    .appName {
+        font-size: 40px;
+    }
+
+    .links {
+        font-size: 15px;
+    }
+
+    .navOptions {
+        /* display: flex; */
+        justify-content: space-around;
+    }
+
+}
+
