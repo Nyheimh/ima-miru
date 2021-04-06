@@ -1,0 +1,13 @@
+/* *-----------------------------Classes-----------------------------* */
+.signIn-form-container {
+  width: 50vw;
+  height: fit-content;
+  padding: 15px 70px;
+  margin: 200px auto;
+  background-color: lightcyan;
+}
+/* *-----------------------------IDs-----------------------------* */
+#cancel-button {
+  margin: 10px;
+  /* background-color: set to a darker blue; */
+}

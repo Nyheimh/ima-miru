@@ -1,0 +1,10 @@
+.footer,
+ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 10px 50px;
+    background-color: black;
+    opacity: 0.6;
+    color: white;
+}

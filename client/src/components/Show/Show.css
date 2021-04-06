@@ -1,0 +1,29 @@
+.title-card{
+  background-color: #99B2EA;
+  margin:0;
+  padding:10px;
+ color:white;
+ 
+ 
+
+}
+
+.product{
+  border: solid black 1px;
+  padding:0;
+  margin: 10px;
+  opacity: 0.9;
+  width: 20%;
+  height:20%
+  
+}
+.product:hover{
+  transform: scale(1.02);
+  opacity: 1.0;
+  box-shadow: 0 0 3px 1px black;
+}
+.product img{
+  min-width: 100%;
+  height: auto;
+  max-height: 200px;
+}

@@ -1,0 +1,18 @@
+
+.shows{
+  display: flex;
+ grid-template-columns: auto;
+ flex-wrap: wrap;
+  font-size: 20px;
+  text-align: center;
+  font-family: sans-serif; 
+  justify-content: space-evenly;
+  letter-spacing: .1px;
+  
+  
+  
+}
+
+
+
+
