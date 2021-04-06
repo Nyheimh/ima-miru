@@ -7,7 +7,7 @@ import { getShows } from '../../services/shows'
 import "./AllShows.css"
 
 const AllShows = ({user}) => {
-
+  const [search, setSearch] = useState('')
 const [allShows, setAllShows] = useState([])
 const [queriedShows, setQueriedShows] = useState([])
 //   const [sortType, setSortType] = useState([])
@@ -19,17 +19,28 @@ const [queriedShows, setQueriedShows] = useState([])
           setQueriedShows(shows)
         }
         fetchShows()
-      }, [])
+    }, [])
+  //Filter //
 
-    const showJSX = queriedShows.map((show, index) =>
+  // 1) First create a new const and filter through allshows/OR queried shows since they both take our axios call (show)//
+  //2) Make sure you have a .includes() with the vlue of your input search you use.. 
+      const filteredImages = queriedShows.filter(val2 => {
+        return val2.title.toLowerCase().includes(search.toLowerCase())
+      })
+//2 make your above filter map all the images and then when you type in the field it filters the images//
+    const showJSX = filteredImages.map((show, index) =>
     <Show _id={show._id} title={show.title} imgURL={show.imgURL} key={index} />
   )
+
+
+  
 
     return (
         <div>  
             <Layout user = {user}>
-                All Shows
-                <Search />
+          All Shows
+                <input id="search" type="text" placeholder="search" value={search} onChange={(e) => setSearch(e.target.value)} />
+          
           <div className="shows">
             
               {showJSX}
