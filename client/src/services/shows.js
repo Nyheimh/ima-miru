@@ -1,14 +1,5 @@
 import api from './apiConfig'
 
-export const getHome = async () => {
-  try {
-      const response = await api.get('/')
-      return response.data
-  } catch (error) {
-      throw error
-  }
-}
-
 export const getShows = async () => {
   try {
       const response = await api.get('/shows')

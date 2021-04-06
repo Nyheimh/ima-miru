@@ -1,10 +1,22 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import './CarouselContainer.css'
 // import { Link } from 'react-router-dom'
 
 
-const CarouselContainer = ({allShows}) => {
+const CarouselContainer = (props) => {
+  const {allShows, allShows2, allShows3, setAllShows2, setAllShows3} = props
+
+  // useEffect (()=> {
+  //   const spliceFunc = (shows, setShows, num) => {
+  //     const move = shows.splice(0, num)
+  //     console.log(move)
+  //     setShows.push(...move)
+  //     console.log(shows)
+  //   }
+  //   spliceFunc(allShows2, setAllShows2, 1)
+  //   spliceFunc(allShows3, setAllShows3, 2)
+  // },[])
 
   console.log(allShows)
 
@@ -14,12 +26,13 @@ const CarouselContainer = ({allShows}) => {
           {console.log(show.title)}
           <Carousel.Item>
             <img
-              className="carouselImg"
+              // className="d-block w-100"
+              className="d-none d-md-block"
               src={show.imgURL}
               alt={show.title}
               />
-              <p>{show.title}</p>
             <Carousel.Caption>
+            <p>{show.title}</p>
             </Carousel.Caption>
           </Carousel.Item>
         })}
