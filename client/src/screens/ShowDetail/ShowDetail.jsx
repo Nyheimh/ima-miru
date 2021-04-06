@@ -3,13 +3,9 @@ import Layout from "../../components/shared/Layout/Layout";
 import { getShow, deleteShow } from "../../services/shows";
 import { useParams, Link, useHistory } from "react-router-dom";
 import {
-  MDBCard,
   MDBCardBody,
-  MDBCardImage,
   MDBCardTitle,
   MDBCardText,
-  MDBRow,
-  MDBCol,
 } from "mdbreact";
 import "./ShowDetail.css";
 
@@ -44,9 +40,9 @@ function ShowDetail({ user }) {
       
           <div className="show-detail">
 
-          <div class="card mb-3">
+          <div className="card mb-3">
             <div className="img-top">
-            <img class="card-img-top" src={show.imgURL} alt={show.title} />
+            <img className="card-img-top" src={show.imgURL} alt={show.title} />
             </div>
             <MDBCardBody cascade className="text-center">
         <MDBCardTitle>{show.title}</MDBCardTitle>
@@ -87,7 +83,7 @@ function ShowDetail({ user }) {
 }
 
 export default ShowDetail;
-{
+
   /* <MDBRow>
   <MDBCol style={{ maxWidth: "40rem" }}>
     <MDBCard reverse>
@@ -107,4 +103,3 @@ export default ShowDetail;
     </MDBCard>
   </MDBCol>
 </MDBRow> */
-}
