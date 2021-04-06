@@ -13,17 +13,17 @@ const authenticatedOptions = (
   </>
 );
 const unauthenticatedOptions = (
-  <div className="unauthOptions">
+  <>
     <NavLink  to="/sign-up">
       Sign Up
     </NavLink>
     <NavLink to="/sign-in">
       Sign In
     </NavLink>
-  </div>
+  </>
 );
 const alwaysOptions = (
-  <div className="alwaysOptions">
+  <div id="alwaysOptions">
     <NavLink to="/shows">
       All Shows
     </NavLink>
@@ -34,7 +34,7 @@ const Nav = ({ user }) => {
   return (
     <nav>
       <div className="nav">
-        <NavLink className="appName" to="/">
+        <NavLink id="appName" to="/">
           Ima Miru
         </NavLink>
         <div className="links">
