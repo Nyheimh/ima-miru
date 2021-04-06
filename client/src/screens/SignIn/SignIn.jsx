@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { signIn } from "../../services/users";
 import { useHistory } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.css";
-import "./SignIn.css";
 import Layout from "../../components/shared/Layout/Layout";
-import { Button, Form, FormGroup, Label, Input } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
+import "./SignIn.css";
 
 const SignIn = (props) => {
   const history = useHistory();
@@ -61,21 +60,35 @@ const SignIn = (props) => {
 
   return (
     <Layout user={props.user}>
-    <Form className="signIn-form-container" onSubmit = {onSignIn}>
-      <h2>Welcome</h2>
-      <Form.Group controlId="formBasicEmail">
-        <Form.Label>Username</Form.Label>
-          <Form.Control required type="text" name="username" value={username} placeholder="Username" onChange={handleChange}/>
-      </Form.Group>
-      <Form.Group controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control required name="password" value={password} type="password" placeholder="Password" onChange={handleChange} />
-      </Form.Group>
-      <Button variant="primary" type="submit">
-        Sign In
-      </Button>
-    </Form>
-  </Layout>
+      <Form className="signIn-form-container" onSubmit={onSignIn}>
+        <h2>Welcome</h2>
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label>Username</Form.Label>
+          <Form.Control
+            required
+            type="text"
+            name="username"
+            value={username}
+            placeholder="Username"
+            onChange={handleChange}
+          />
+        </Form.Group>
+        <Form.Group controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            required
+            name="password"
+            value={password}
+            type="password"
+            placeholder="Password"
+            onChange={handleChange}
+          />
+        </Form.Group>
+        <Button variant="primary" type="submit">
+          Sign In
+        </Button>
+      </Form>
+    </Layout>
   );
 };
 
