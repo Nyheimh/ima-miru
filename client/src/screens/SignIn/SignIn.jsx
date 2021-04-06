@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { signIn } from "../../services/users";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { Button, Form } from "react-bootstrap";
 import Layout from "../../components/shared/Layout/Layout";
 import "./SignIn.css";
@@ -36,7 +36,7 @@ const SignIn = (props) => {
         console.error(error);
         setForm({
           isError: true,
-          errorMsg: "Invalid Credentials",
+          errorMsg: "Invalid, please try again",
           username: "",
           password: "",
         });
@@ -47,11 +47,9 @@ const SignIn = (props) => {
     const toggleForm = form.isError ? "danger" : "";
     if (form.isError) {
       return (
-        <button type="submit" className={toggleForm}>
-          <Button variant="primary" type="submit">
+        <Button type="submit" className={toggleForm} variant="primary">
             {form.errorMsg}
           </Button>
-        </button>
       );
     } else {
       return <Button type="submit">Sign In</Button>;
@@ -64,7 +62,7 @@ const SignIn = (props) => {
     <Layout user={props.user}>
       <Form className="signIn-form-container" onSubmit={onSignIn}>
         <h2>Welcome</h2>
-        <Form.Group controlId="formBasicEmail">
+        <Form.Group>
           <Form.Label>Username</Form.Label>
           <Form.Control
             required
@@ -75,7 +73,7 @@ const SignIn = (props) => {
             onChange={handleChange}
           />
         </Form.Group>
-        <Form.Group controlId="formBasicPassword">
+        <Form.Group>
           <Form.Label>Password</Form.Label>
           <Form.Control
             required
@@ -87,6 +85,9 @@ const SignIn = (props) => {
           />
         </Form.Group>
         {renderError()}
+        <Link to="/">
+          <Button id="cancel-button">Cancel</Button>
+        </Link>
       </Form>
     </Layout>
   );

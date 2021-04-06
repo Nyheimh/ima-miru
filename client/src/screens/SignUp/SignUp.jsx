@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { signUp, signIn } from "../../services/users";
 import { Form, Button } from "react-bootstrap";
 import Layout from "../../components/shared/Layout/Layout";
@@ -47,7 +47,7 @@ const SignUp = (props) => {
     const toggleForm = form.isError ? "danger" : "";
     if (form.isError) {
       return (
-        <Button type="submit" className={toggleForm}>
+        <Button type="submit" className={toggleForm} variant="primary">
           {form.errorMsg}
         </Button>
       );
@@ -62,8 +62,8 @@ const SignUp = (props) => {
     <Layout user={props.user}>
       <Form className="signUp-form-container" onSubmit={onSignUp}>
         <h2>Create your account below!</h2>
-        <Form.Group controlId="formBasicEmail">
-          <Form.Label>Username</Form.Label>
+        <Form.Group>
+          <Form.Label className="form-label">Username</Form.Label>
           <Form.Control
             required
             type="text"
@@ -73,8 +73,8 @@ const SignUp = (props) => {
             onChange={handleChange}
           />
         </Form.Group>
-        <Form.Group controlId="formBasicEmail">
-          <Form.Label>Email</Form.Label>
+        <Form.Group>
+          <Form.Label className="form-label">Email</Form.Label>
           <Form.Control
             required
             type="email"
@@ -84,8 +84,8 @@ const SignUp = (props) => {
             onChange={handleChange}
           />
         </Form.Group>
-        <Form.Group controlId="formBasicEmail">
-          <Form.Label>Password</Form.Label>
+        <Form.Group>
+          <Form.Label className="form-label">Password</Form.Label>
           <Form.Control
             required
             name="password"
@@ -95,8 +95,8 @@ const SignUp = (props) => {
             onChange={handleChange}
           />
         </Form.Group>
-        <Form.Group controlId="formBasicEmail">
-          <Form.Label>Confirm password</Form.Label>
+        <Form.Group>
+          <Form.Label className="form-label">Confirm password</Form.Label>
           <Form.Control
             required
             name="passwordConfirmation"
@@ -107,11 +107,17 @@ const SignUp = (props) => {
           />
         </Form.Group>
         {renderError()}
+        <Link to="/">
+          <Button id="cancel-button">Cancel</Button>
+        </Link>
+        <Link to="/sign-in">
+        <Form.Text className="text-muted">
+          Already have an account? Click here to sign in.
+        </Form.Text>
+        </Link>
       </Form>
     </Layout>
   );
 };
 
 export default SignUp;
-
-//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImlybXoiLCJlbWFpbCI6ImlybXpAZ21haWwuY29tIiwiaWF0IjoxNjE3NjM1MjE0fQ.dFcRIKD4hx0eGOHtdjIgItxcHXtsI1ZprN--9q0sB5E

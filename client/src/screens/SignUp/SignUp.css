@@ -6,3 +6,9 @@
   margin: 200px auto;
   background-color: lightcyan;
 }
+
+/* *-----------------------------IDs-----------------------------* */
+#cancel-button {
+  margin: 10px;
+  /* background-color: set to a darker blue; */
+}

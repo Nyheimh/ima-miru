@@ -1,0 +1,8 @@
+/* *-----------------------------Classes-----------------------------* */
+.createShow-form-container {
+  width: 50vw;
+  height: fit-content;
+  padding: 15px 70px;
+  margin: 200px auto;
+  background-color: lightcyan;
+}
