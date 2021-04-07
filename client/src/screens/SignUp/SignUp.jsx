@@ -61,7 +61,7 @@ const SignUp = (props) => {
   return (
     <Layout user={props.user}>
       <Form className="signUp-form-container" onSubmit={onSignUp}>
-        <h2 className= "signup-form-title">Create your account below!</h2>
+        <h2 className= "signUp-form-title">Create your account below!</h2>
         <Form.Group>
           <Form.Label className="form-label">Create Username</Form.Label>
           <Form.Control
@@ -84,7 +84,6 @@ const SignUp = (props) => {
             placeholder="Enter email"
             onChange={handleChange}
             id="form-control"
-
           />
         </Form.Group>
         <Form.Group>
@@ -97,7 +96,6 @@ const SignUp = (props) => {
             placeholder="Password"
             onChange={handleChange}
             id="form-control"
-
           />
         </Form.Group>
         <Form.Group>
@@ -113,7 +111,7 @@ const SignUp = (props) => {
 
           />
         </Form.Group>
-        <div className="buttons">
+        <div className="signUp-buttons">
 
         {renderError()}
         <Link to="/">

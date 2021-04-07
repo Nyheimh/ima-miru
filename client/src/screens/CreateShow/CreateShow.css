@@ -1,59 +1,33 @@
-.form-container {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  width: 50vw;
-  /* justify-content: flex-start;  */
-}
-.form-title {
-  align-content: flex-start;
-  text-align: left;
-}
-label {
-  padding-left: 12px;
-}
-input {
-  padding:
-}
-
-
-
-/* *-----------------------------Tags-----------------------------* */
-/* *-----------------------------Classes-----------------------------* */
-/* .create-show-form-container {
+.addSeriesform-container {
   width: 50vw;
   height: fit-content;
   padding: 15px 70px;
-  margin: 100px auto;
-  background-color: rgba(153, 178, 234, .7);
+  margin: 0px auto;
+  background-color: lightcyan;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  background-color: rgba(153, 178, 234, .8);
 }
-.add-series {
+.addSeries-form-title {
+  align-self: center;
+  text-align: center;
+  font-size: 50px;
   color: white;
+  font-weight: bold;
 }
-.form-control {
-  margin: 15px auto;
-  width: fit-content;
+/* BORDER RADIUS */
+#form-control {
+  border-radius: 0;
+  font-size: 20px; 
 }
-
-#formGroupExampleInput {
-  width: 80%;
-  border-radius: none;
-  /* margin: 0 auto; */
-/* }
-#exampleFormControlTextarea1 {
-  width: 80%;
-} */ 
-/* *-----------------------------IDs-----------------------------* */
-/* #add-button {
+#add-button {
+  align-self: center;
   background-color: #0B4779;
-  width: fit-content;
-  margin: 15px auto;
-} */
-
+  font-size: 20px;
+  font-weight: bold;
+}
 
 /* *-----------------------------MQs-----------------------------* */
 /* @media only screen and (max-width : 375px) {
