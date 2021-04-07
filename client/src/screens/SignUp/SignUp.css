@@ -5,10 +5,53 @@
   padding: 15px 70px;
   margin: 200px auto;
   background-color: lightcyan;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: rgba(153, 178, 234, .8);
+}
+.signup-form-title{
+  align-self: center;
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+}
+/* This id is attached to all the form.control inputs and it overrides the border-radius to none
+Do we want border-radius here ???? */
+#form-control {
+  border-radius: 0;
+  font-size: 20px; 
+}
+label {
+  color: white;
+  font-size: 22px; 
+
 }
 
-/* *-----------------------------IDs-----------------------------* */
-#cancel-button {
-  margin: 10px;
-  /* background-color: set to a darker blue; */
+.buttons {
+  display: flex;
+  justify-content: center;
 }
+#submit-button {
+  align-self: center;
+  background-color: #0B4779;
+  font-size: 20px;
+}
+#cancel-button {
+  align-self: center;
+  background-color: #0B4779;
+  font-size: 20px;
+
+}
+#text-muted {
+  align-self: center;
+  color: #0B4779;
+  font-size: 20px;
+}
+
+@media only screen and (max-width : 375px) {
+
+}
+/* border: none !important; */

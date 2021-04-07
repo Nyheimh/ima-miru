@@ -34,8 +34,45 @@ const CreateShow = ({ user }) => {
   }
   return (
     <Layout user={user}>
-      <Form className="create-show-form-container" onSubmit={handleSubmit}>
-        <h2 className="add-series">Add your favorite anime series here!</h2>
+      <Form className="form-container" onSubmit={handleSubmit}>
+        <h2 className="form-title">Add Series</h2>
+
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label>Title</Form.Label>
+          {/* <label>Title</label> */}
+          {/* <Form.Control type="text" placeholder="Title" /> */}
+          <input
+          type="text"
+          className="form-control" //This line will take off the styling for the input boxes
+          placeholder="Title"
+          value={show.title}
+          required
+          autoFocus
+          onChange={handleChange}
+        />
+
+        </Form.Group>
+
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label>Duration</Form.Label>
+          <Form.Control type="text" placeholder="Duration (ex. 2005-2010)" />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label>Image URL</Form.Label>
+          <Form.Control type="text" placeholder="Image URL" />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label>Plot Summary</Form.Label>
+          <textarea
+            className="form-control"
+            id="exampleFormControlTextarea1"
+            rows="5"
+            placeholder="Plot Summary (2-4 sentences)"
+          />
+        </Form.Group>
+        {/* <Form.Label>Title</Form.Label>
         <input
           type="text"
           className="form-control"
@@ -77,7 +114,7 @@ const CreateShow = ({ user }) => {
           name="plot"
           required
           onChange={handleChange}
-        />
+        /> */}
         <Button type="submit" id="add-button">
           Add
         </Button>
