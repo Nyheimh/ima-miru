@@ -15,6 +15,7 @@
 .links {
     display: inline;
     font-size: 17px;
+
     margin:  auto 0;
     margin-left: 20px;
     width: 100%;
@@ -47,15 +48,6 @@
     font-size: 30px;
 }
 
-/*---------------Media Queries iPhone Plus---------------*/
-
-@media only screen and (min-width: 414px) {
-    /* .userWelcome {
-        padding-left: 260px;
-    } */
-}
-
-
 /*---------------Media Queries iPad---------------*/
 
 @media only screen and (min-width: 768px) {
@@ -67,16 +59,12 @@
     }
 
     .links {
-        font-size: 20px;
+        font-size: 23px;
         width: 50%;
     }
 
-    /* .userWelcome {
-        padding-left: 240px;
-    } */
-    
     #appName {
-        font-size: 55px;
+        font-size: 45px;
     }
 
 }

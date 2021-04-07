@@ -32,7 +32,7 @@ img {
 
 /*---------------Media Queries iPad Pro---------------*/
 
-@media only screen and (min-width: 1017px) {
+@media only screen and (min-width: 1024px) {
 
   .item {
     display: inline;
