@@ -39,7 +39,10 @@ const Nav = ({ user }) => {
         </NavLink>
         <div className="links">
           <div className="authorized">
-            {user && <div className="userWelcome">Welcome, {user.username}</div>}
+            {user && <div className="userWelcome"> 
+              <div></div> 
+              Welcome, {user.username}
+            </div>}
               <div className="navOptions">
                 {alwaysOptions}
                 {user ? authenticatedOptions : unauthenticatedOptions}

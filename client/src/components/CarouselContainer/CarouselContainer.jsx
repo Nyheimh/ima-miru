@@ -12,7 +12,7 @@ const CarouselContainer = ({allShows}) => {
       <Carousel
         additionalTransfrom={0}
         arrows
-        // autoPlay
+        autoPlay
         autoPlaySpeed={3500}
         centerMode={false}
         className=""
