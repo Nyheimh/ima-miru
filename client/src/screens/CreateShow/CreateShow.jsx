@@ -4,9 +4,8 @@ import { createShow } from "../../services/shows";
 import { Button, Form } from "react-bootstrap";
 import Layout from "../../components/shared/Layout/Layout";
 import "./CreateShow.css";
-import FormCheckInput from "react-bootstrap/esm/FormCheckInput";
 
-const CreateShow = ({ user }) => {
+const CreateShow = (props) => {
   const [show, setShow] = useState({
     title: "",
     plot: "",
@@ -18,6 +17,8 @@ const CreateShow = ({ user }) => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
+    console.log(name)
+    console.log(value)
     setShow({
       ...show,
       [name]: value,
@@ -34,51 +35,65 @@ const CreateShow = ({ user }) => {
     return <Redirect to={`/shows`} />;
   }
   return (
-    <Layout user={user}>
-      <Form className="create-show-form-container" onSubmit={handleSubmit}>
-        <h2 className="add-series">Add your favorite anime series here!</h2>
-        <input
-          type="text"
-          className="form-control"
-          id="formGroupExampleInput"
-          placeholder="Title"
-          value={show.title}
-          required
-          autoFocus
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          className="form-control"
-          id="formGroupExampleInput"
-          placeholder="Duration"
-          value={show.duration}
-          name="duration"
-          required
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          className="form-control"
-          id="formGroupExampleInput"
-          placeholder="Image URL"
-          value={show.imgURL}
-          name="imgURL"
-          required
-          onChange={handleChange}
-        />
-        <textarea
-          className="form-control"
-          id="exampleFormControlTextarea1"
-          rows="5"
-          // rows={10}
-          type="text-area"
-          placeholder="Plot Summary"
-          value={show.plot}
-          name="plot"
-          required
-          onChange={handleChange}
-        />
+    // For whatever reason I can not type in my input field anymore...
+    <Layout user={props.user}>
+      <Form className="addSeriesform-container" onSubmit={handleSubmit}>
+        <h2 className="addSeries-form-title">Add Series</h2>
+        <Form.Group>
+          <Form.Label className="addSeries-form-label">Title</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Title"
+            name="title"
+            value={show.title}
+            required
+            autoFocus
+            onChange={handleChange}
+            // id="form-control"
+          />
+        </Form.Group>
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label className="addSeries-form-label">Duration</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Duration"
+            name="duration"
+            value={show.duration}
+            required
+            autoFocus
+            onChange={handleChange}
+            // id="form-control"
+
+          />
+        </Form.Group>
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label className="addSeries-form-label">Image URL</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="URL address"
+            name="imgURL"
+            value={show.imgURL}
+            required
+            autoFocus
+            onChange={handleChange}
+            // id="form-control"
+          />
+        </Form.Group>
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label className="addSeries-form-label">Plot Summary</Form.Label>
+          <textarea
+            type="text"
+            placeholder="Plot (2-4 sentences)"
+            name="plot"
+            value={show.plot}
+            rows= "6"
+            required
+            autoFocus
+            onChange={handleChange}
+            className="form-control"
+            // id="form-control"
+          />
+        </Form.Group>
         <Button type="submit" id="add-button">
           Add
         </Button>
