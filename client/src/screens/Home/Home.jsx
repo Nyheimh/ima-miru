@@ -1,7 +1,5 @@
-import React, {useState, useEffect} from 'react'
 import Layout from '../../components/shared/Layout/Layout'
 import CarouselContainer from '../../components/CarouselContainer/CarouselContainer'
-import { getShows } from '../../services/shows'
 
 const Home = ({user}) => {
 //     const [allShows, setAllShows] = useState([])
