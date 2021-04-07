@@ -37,7 +37,7 @@ const CreateShow = (props) => {
   return (
     // For whatever reason I can not type in my input field anymore...
     <Layout user={props.user}>
-      <Form className="addSeriesform-container" onSubmit={handleSubmit}>
+      <Form className="addSeries-form-container" onSubmit={handleSubmit}>
         <h2 className="addSeries-form-title">Add Series</h2>
         <Form.Group>
           <Form.Label className="addSeries-form-label">Title</Form.Label>
