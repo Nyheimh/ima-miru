@@ -10,8 +10,9 @@ img {
 /*---------------CLASS---------------*/
 
 .carousel {
-  margin: 23% auto;
+  margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.5);
+  width: 80%;
 }
 
 /*---------------IDs---------------*/
@@ -23,7 +24,8 @@ img {
 @media only screen and (min-width: 768px) {
 
   img {
-    height: 70vw;
+    /* height: 70vw; */
+    height: 50%;
     margin: 15% auto;
     height: 80%;
   }
@@ -39,12 +41,4 @@ img {
     text-align: center;
   }
 
-}
-
-/*---------------Media Queries LargeDesktop---------------*/
-
-@media only screen and (min-width: 1200px) {
-
-
-  
 }
