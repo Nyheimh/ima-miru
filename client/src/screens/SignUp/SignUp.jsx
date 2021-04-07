@@ -47,12 +47,12 @@ const SignUp = (props) => {
     const toggleForm = form.isError ? "danger" : "";
     if (form.isError) {
       return (
-        <Button type="submit" className={toggleForm} variant="primary">
+        <Button id="submit-button" type="submit" className={toggleForm} variant="primary">
           {form.errorMsg}
         </Button>
       );
     } else {
-      return <Button type="submit">Sign Up</Button>;
+      return <Button id="submit-button" type="submit">Sign Up</Button>;
     }
   };
 
@@ -61,20 +61,20 @@ const SignUp = (props) => {
   return (
     <Layout user={props.user}>
       <Form className="signUp-form-container" onSubmit={onSignUp}>
-        <h2>Create your account below!</h2>
+        <h2 className= "signUp-form-title">Create your account below!</h2>
         <Form.Group>
-          <Form.Label className="form-label">Username</Form.Label>
+          <Form.Label className="form-label">Create Username</Form.Label>
           <Form.Control
             required
             type="text"
             name="username"
             value={username}
-            placeholder="Enter username"
+            placeholder="Username"
             onChange={handleChange}
           />
         </Form.Group>
         <Form.Group>
-          <Form.Label className="form-label">Email</Form.Label>
+          <Form.Label className="form-label">Enter Email</Form.Label>
           <Form.Control
             required
             type="email"
@@ -85,7 +85,7 @@ const SignUp = (props) => {
           />
         </Form.Group>
         <Form.Group>
-          <Form.Label className="form-label">Password</Form.Label>
+          <Form.Label className="form-label">Create Password</Form.Label>
           <Form.Control
             required
             name="password"
@@ -104,14 +104,18 @@ const SignUp = (props) => {
             type="password"
             placeholder="Confirm Password"
             onChange={handleChange}
+
           />
         </Form.Group>
+        <div className="signUp-buttons">
+
         {renderError()}
         <Link to="/">
-          <Button id="cancel-button">Cancel</Button>
+          <Button id="cancel-button" type="submit">Cancel</Button>
         </Link>
-        <Link to="/sign-in">
-        <Form.Text className="text-muted">
+        </div>
+        <Link id="text-muted" to="/sign-in">
+        <Form.Text>
           Already have an account? Click here to sign in.
         </Form.Text>
         </Link>
