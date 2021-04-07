@@ -104,11 +104,9 @@ const SignUp = (props) => {
             type="password"
             placeholder="Confirm Password"
             onChange={handleChange}
-
           />
         </Form.Group>
         <div className="signUp-buttons">
-
         {renderError()}
         <Link to="/">
           <Button id="cancel-button" type="submit">Cancel</Button>

@@ -3,14 +3,12 @@
   width: 50vw;
   height: fit-content;
   padding: 15px 70px;
-  /* WE SHOULD SET THE MARGIN FOR ALL PAGES TO A CERTAIN DISTANCE FROM THE TOPpx AUTO */
   margin: 0px auto;
-  background-color: lightcyan;
   text-align: left;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  background-color: rgba(153, 178, 234, .8);
+  background-color: rgba(153, 178, 234, .7);
 }
 .signUp-form-title{
   align-self: center;
@@ -21,10 +19,10 @@
 }
 /* This id is attached to all the form.control inputs and it overrides the border-radius to none
 Do we want border-radius here ???? */
-#form-control {
+/* #form-control {
   border-radius: 0;
   font-size: 20px; 
-}
+} */
 /* THIS LABEL COVERS ALL LABELS ON OUR APP */
 label {
   color: white;
