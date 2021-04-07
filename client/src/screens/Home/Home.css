@@ -6,7 +6,9 @@
 
 .homeStatement {
     /* -webkit-text-stroke: 0.5px rgb(87, 87, 87); */
-    margin: 8% 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 5%;
     color: white;
     font-weight: bold;
     font-size: 13px;
