@@ -1,4 +1,5 @@
 import React from "react";
+import 'font-awesome/css/font-awesome.min.css';
 import './Footer.css'
 
 const Footer = () => {
@@ -11,18 +12,18 @@ const Footer = () => {
         <h5 className="footer-h5">Developers :</h5>
       </div>
       <div class="footer-links">
-        
-      <a class="footer-link" href="https://github.com/Nyheimh" target="blank">
-      <i class="fa fa-github"></i> " &nbsp; Nyheim Hunter"
+  
+      <a class="footer-link" href="https://www.linkedin.com/in/nyheimhunter/" target="blank"> Nyheim Hunter
+      <i id="icon" class="fa fa-linkedin" aria-hidden="true"></i>  
       </a>
-      <a class="footer-link" href="https://github.com/Nyheimh" target="blank">
-      <i class="fa fa-github"></i> " &nbsp; Irma Leandre"
+      <a class="footer-link" href="https://www.linkedin.com/in/irma-leandre-660313154/" target="blank"> Irma Leandre
+      <i id="icon" class="fa fa-linkedin" aria-hidden="true"></i> 
       </a>
-      <a class="footer-link" href="https://github.com/Nyheimh" target="blank">
-      <i class="fa fa-github"></i> " &nbsp; Andri Rafti"
+      <a class="footer-link" href="https://www.linkedin.com/in/andri-rafti-770b49126/" target="blank"> Andri Rafti
+      <i id="icon" class="fa fa-linkedin" aria-hidden="true"></i>
       </a>
-      <a class="footer-link" href="https://github.com/Nyheimh" target="blank">
-      <i class="fa fa-github"></i> " &nbsp; Jordan Montero "
+      <a class="footer-link" href="https://www.linkedin.com/in/jordanmontero96/" target="blank"> Jordan Montero
+      <i id="icon" class="fa fa-linkedin" aria-hidden="true"></i>
       </a>
       </div>
     </div>
