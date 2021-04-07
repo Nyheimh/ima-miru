@@ -8,22 +8,22 @@ const Footer = () => {
       {/* <a href="#">
       <h1> Ima Miru </h1>
       </a> */}
-      <div class="footer-text">
+      <div className="footer-text">
         <h5 className="footer-h5">Developers :</h5>
       </div>
-      <div class="footer-links">
+      <div className="footer-links">
   
       <a class="footer-link" href="https://www.linkedin.com/in/nyheimhunter/" target="blank"> Nyheim Hunter
-      <i id="icon" class="fa fa-linkedin" aria-hidden="true"></i>  
+      <i id="icon" className="fa fa-linkedin" aria-hidden="true"></i>  
       </a>
       <a class="footer-link" href="https://www.linkedin.com/in/irma-leandre-660313154/" target="blank"> Irma Leandre
-      <i id="icon" class="fa fa-linkedin" aria-hidden="true"></i> 
+      <i id="icon" className="fa fa-linkedin" aria-hidden="true"></i> 
       </a>
       <a class="footer-link" href="https://www.linkedin.com/in/andri-rafti-770b49126/" target="blank"> Andri Rafti
-      <i id="icon" class="fa fa-linkedin" aria-hidden="true"></i>
+      <i id="icon" className="fa fa-linkedin" aria-hidden="true"></i>
       </a>
       <a class="footer-link" href="https://www.linkedin.com/in/jordanmontero96/" target="blank"> Jordan Montero
-      <i id="icon" class="fa fa-linkedin" aria-hidden="true"></i>
+      <i id="icon" className="fa fa-linkedin" aria-hidden="true"></i>
       </a>
       </div>
     </div>
