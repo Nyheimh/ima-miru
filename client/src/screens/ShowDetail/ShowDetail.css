@@ -81,7 +81,7 @@
 .button-container {
   display: flex;
   padding-top: 200px;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 
