@@ -1,10 +1,35 @@
-.footer,
-ul {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    padding: 10px 50px;
-    background-color: black;
-    opacity: 0.6;
-    color: white;
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+.footer {
+  flex-shrink: 0;
+  background: #99B2EA;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 550px)
+.footer-h1 {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+@media screem and (max-width: 614px)
+.footer-h1 {
+  margin-left: 18px;
+}
+ */
+
+/* .footer, 
+.footer-text
+@media screen and (max-width: 550px),
+  {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  }
+ */
