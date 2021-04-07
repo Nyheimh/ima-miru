@@ -1,13 +1,12 @@
 /* *-----------------------------Classes-----------------------------* */
 .signUp-form-container {
-  width: 50vw;
+  width: 50%;
   height: fit-content;
   padding: 15px 70px;
   margin: 0px auto;
   text-align: left;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  flex-flow: column nowrap;
   background-color: rgba(153, 178, 234, .7);
 }
 .signUp-form-title{
@@ -17,12 +16,6 @@
   color: white;
   font-weight: bold;
 }
-/* This id is attached to all the form.control inputs and it overrides the border-radius to none
-Do we want border-radius here ???? */
-/* #form-control {
-  border-radius: 0;
-  font-size: 20px; 
-} */
 /* THIS LABEL COVERS ALL LABELS ON OUR APP */
 label {
   color: white;
@@ -51,9 +44,20 @@ label {
   align-self: center;
   color: #0B4779;
   font-size: 20px;
+  text-align: center;
 }
 
 @media only screen and (max-width : 375px) {
-
+  .signUp-form-container {
+    width: 90%;
+  }
+  .signUp-form-title{
+    font-size: 25px;
+  }
+  label {
+    font-size: 18px;
+  }
+  #submit-button {
+    font-size: 19px;
+  }
 }
-/* border: none !important; */
