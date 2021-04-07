@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
 // import Card from 'react-bootstrap/Card'
 import './CarouselContainer.css'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css';
 
-const CarouselContainer = ({allShows}) => {
+const CarouselContainer = ({ allShows }) => {
+
+  console.log(allShows)
 
   return (
     <div className="carousel">
@@ -89,54 +91,57 @@ const CarouselContainer = ({allShows}) => {
         slidesToSlide={1}
         swipeable
       >
-        <img
-          className="image"
-          // className="d-block w-100"
-          src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Ffilmdaily.co%2Fwp-content%2Fuploads%2F2020%2F10%2Fboys-over-flowers-anime_lede.jpg"
-          alt="First slide"
-        />
-        <img
-          className="image"
-          // className="d-none d-sm-inline w-100"
-          src="https://m.media-amazon.com/images/I/51wIwhIO6JL._AC_.jpg"
-          alt="Second slide"
-        />
-        <img
-          className="image"
-          // className="d-none d-sm-inline w-100"
-          src="https://m.media-amazon.com/images/I/51wIwhIO6JL._AC_.jpg"
-          alt="Second slide"
-        />
-        <img
-          className="image"
-          // className="d-none d-lg-inline w-100"
-          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.PYswdoFN0qdTRqTcYqLtDwAAAA%26pid%3DApi&f=1"
-          alt="Fourth slide"
-        />
-        <img
-          className="image"
-          // className="d-block w-100"
-          src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Ffilmdaily.co%2Fwp-content%2Fuploads%2F2020%2F10%2Fboys-over-flowers-anime_lede.jpg"
-          alt="First slide"
-        />
-        <img
-          className="image"
-          // className="d-none d-sm-inline w-100"
-          src="https://m.media-amazon.com/images/I/51wIwhIO6JL._AC_.jpg"
-          alt="Second slide"
-        />
-        <img
-          className="image"
-          // className="d-none d-sm-inline w-100"
-          src="https://m.media-amazon.com/images/I/51wIwhIO6JL._AC_.jpg"
-          alt="Second slide"
-        />
-        <img
-          className="image"
-          // className="d-none d-lg-inline w-100"
-          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.PYswdoFN0qdTRqTcYqLtDwAAAA%26pid%3DApi&f=1"
-          alt="Fourth slide"
-        />
+
+        <Link to={`/shows/606c7ecba4b4800aaef3fa01`}>
+          <img
+            src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Ffilmdaily.co%2Fwp-content%2Fuploads%2F2020%2F10%2Fboys-over-flowers-anime_lede.jpg"
+            alt="Boys Over Flowers"
+          />
+        </Link>
+        <Link to={`/shows/606c7ecba4b4800aaef3fa01`}>
+          <img
+            src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Ffilmdaily.co%2Fwp-content%2Fuploads%2F2020%2F10%2Fboys-over-flowers-anime_lede.jpg"
+            alt="Boys Over Flowers"
+          />
+        </Link>
+        <Link to={`/shows/606c7ecba4b4800aaef3fa01`}>
+          <img
+            src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Ffilmdaily.co%2Fwp-content%2Fuploads%2F2020%2F10%2Fboys-over-flowers-anime_lede.jpg"
+            alt="Boys Over Flowers"
+          />
+        </Link>
+        <Link to={`/shows/606c7ecba4b4800aaef3fa01`}>
+          <img
+            src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Ffilmdaily.co%2Fwp-content%2Fuploads%2F2020%2F10%2Fboys-over-flowers-anime_lede.jpg"
+            alt="Boys Over Flowers"
+          />
+        </Link>
+        <Link to={`/shows/606c7ecba4b4800aaef3fa01`}>
+          <img
+            src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Ffilmdaily.co%2Fwp-content%2Fuploads%2F2020%2F10%2Fboys-over-flowers-anime_lede.jpg"
+            alt="Boys Over Flowers"
+          />
+        </Link>
+        <Link to={`/shows/606c7ecba4b4800aaef3fa01`}>
+          <img
+            src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Ffilmdaily.co%2Fwp-content%2Fuploads%2F2020%2F10%2Fboys-over-flowers-anime_lede.jpg"
+            alt="Boys Over Flowers"
+          />
+        </Link>
+        <Link to={`/shows/606c7ecba4b4800aaef3fa01`}>
+          <img
+            src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Ffilmdaily.co%2Fwp-content%2Fuploads%2F2020%2F10%2Fboys-over-flowers-anime_lede.jpg"
+            alt="Boys Over Flowers"
+          />
+        </Link>
+        <Link to={`/shows/606c7ecba4b4800aaef3fa01`}>
+          <img
+            src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Ffilmdaily.co%2Fwp-content%2Fuploads%2F2020%2F10%2Fboys-over-flowers-anime_lede.jpg"
+            alt="Boys Over Flowers"
+          />
+        </Link>
+
+        
       </Carousel>
     </div>
   )

@@ -15,6 +15,10 @@ img {
   width: 80%;
 }
 
+/* a > .image {
+  height: 50vw;
+} */
+
 /*---------------IDs---------------*/
 
 
@@ -36,9 +40,9 @@ img {
 
 @media only screen and (min-width: 1024px) {
 
-  .item {
+  /* .item {
     display: inline;
     text-align: center;
-  }
+  } */
 
 }
