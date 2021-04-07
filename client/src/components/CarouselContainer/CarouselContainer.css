@@ -24,7 +24,6 @@ img {
 
   img {
     height: 70vw;
-    display: block;
     margin: 15% auto;
     height: 80%;
   }
@@ -36,9 +35,13 @@ img {
 @media only screen and (min-width: 1017px) {
 
   .item {
-    margin: 25px;
-    padding-left: 5%;
-    padding-right: 5%;
+    display: inline;
+    text-align: center;
+  }
+
+  img {
+    /* height: 70%; */
+    /* margin: auto; */
   }
 
 }
