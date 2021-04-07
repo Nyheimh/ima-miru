@@ -17,6 +17,8 @@ const CreateShow = (props) => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
+    console.log(name)
+    console.log(value)
     setShow({
       ...show,
       [name]: value,
@@ -42,12 +44,12 @@ const CreateShow = (props) => {
           <Form.Control
             type="text"
             placeholder="Title"
+            name="title"
             value={show.title}
             required
             autoFocus
             onChange={handleChange}
-            id="form-control"
-
+            // id="form-control"
           />
         </Form.Group>
         <Form.Group controlId="formBasicEmail">
@@ -55,11 +57,12 @@ const CreateShow = (props) => {
           <Form.Control
             type="text"
             placeholder="Duration"
+            name="duration"
             value={show.duration}
             required
             autoFocus
             onChange={handleChange}
-            id="form-control"
+            // id="form-control"
 
           />
         </Form.Group>
@@ -68,11 +71,12 @@ const CreateShow = (props) => {
           <Form.Control
             type="text"
             placeholder="URL address"
+            name="imgURL"
             value={show.imgURL}
             required
             autoFocus
             onChange={handleChange}
-            id="form-control"
+            // id="form-control"
           />
         </Form.Group>
         <Form.Group controlId="formBasicEmail">
@@ -80,13 +84,14 @@ const CreateShow = (props) => {
           <textarea
             type="text"
             placeholder="Plot (2-4 sentences)"
+            name="plot"
             value={show.plot}
             rows= "6"
             required
             autoFocus
             onChange={handleChange}
             className="form-control"
-            id="form-control"
+            // id="form-control"
           />
         </Form.Group>
         <Button type="submit" id="add-button">
