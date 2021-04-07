@@ -1,11 +1,6 @@
 
 /*---------------TAGS---------------*/
 
-.carousel {
-  margin: 25% auto;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 img {
   height: 100vw;
   display: block;
@@ -14,6 +9,10 @@ img {
 
 /*---------------CLASS---------------*/
 
+.carousel {
+  margin: 23% auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
 /*---------------IDs---------------*/
 
@@ -23,6 +22,11 @@ img {
 
 @media only screen and (min-width: 768px) {
 
+  img {
+    height: 70vw;
+    display: block;
+    margin: 0 auto;
+  }
   
 }
 

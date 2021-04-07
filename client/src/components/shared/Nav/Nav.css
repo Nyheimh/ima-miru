@@ -21,7 +21,7 @@
 }
 
 .userWelcome {
-    padding-left: 220px;
+    padding-left: 260px;
     margin-right: 0px;
 }
 
@@ -57,8 +57,12 @@
     }
 
     .links {
-        font-size: px;
+        font-size: 25px;
         width: 50%;
+    }
+
+    .userWelcome {
+        padding-left: 210px;
     }
     
     #appName {
@@ -77,7 +81,7 @@
     }
 
     .userWelcome {
-        padding-left: 250px;
+        padding-left: 220px;
     }
 
     #appName {

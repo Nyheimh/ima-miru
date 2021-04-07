@@ -37,7 +37,7 @@ const CarouselContainer = ({allShows}) => {
           },
           mobile: {
             breakpoint: {
-              max: 464,
+              max: 768,
               min: 0
             },
             items: 1,
@@ -46,7 +46,7 @@ const CarouselContainer = ({allShows}) => {
           tablet: {
             breakpoint: {
               max: 1024,
-              min: 464
+              min: 769
             },
             items: 2,
             partialVisibilityGutter: 30
