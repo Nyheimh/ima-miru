@@ -1,29 +1,19 @@
 
 /*---------------TAGS---------------*/
 
-h3,
-p {
-  color: black;
+.carousel {
+  margin: 25% auto;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 img {
-  height: 40vw;
+  height: 100vw;
   display: block;
   margin: 0 auto;
-  /* width: auto; */
-  /* min-width: 30%; */
 }
 
 /*---------------CLASS---------------*/
 
-.carousel {
-  margin: 5px auto; 
-  width: 80%;
-  /* height: auto; */
-  height: 75vh;
-  /* color: black;
-  overflow: hidden; */
-}
 
 /*---------------IDs---------------*/
 
@@ -40,9 +30,6 @@ img {
 
 @media only screen and (min-width: 1050px) {
 
-  .carousel {
-    width: 95%;
-  }
   
 }
 
@@ -50,8 +37,6 @@ img {
 
 @media only screen and (min-width: 1200px) {
 
-  .carousel {
-    width: 90%;
-  }
+
   
 }

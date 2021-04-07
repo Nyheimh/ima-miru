@@ -7,7 +7,7 @@
 
 .nav {
     padding: 10px 20px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.99);
     opacity: 0.6;
     color: white;
 }
@@ -21,8 +21,8 @@
 }
 
 .userWelcome {
-    padding-left: 200px;
-    justify-content: right;
+    padding-left: 220px;
+    margin-right: 0px;
 }
 
 .navOptions {
