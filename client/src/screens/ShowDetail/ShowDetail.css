@@ -34,7 +34,9 @@
   display: flex;
   flex-flow: row wrap;
   align-content: space-between;
-  line-height: 1.5;
+  padding-top: 50px;
+  /* justify-content: center; */
+  /* line-height: 1.5; */
   /* right: 250px; */
   /* border: red 5px solid; */
   /* justify-content: center;
@@ -65,14 +67,15 @@
 
 .anime-image {
   width: 400px;
-  padding: 0 40px;
+  /* padding: 0 40px; */
+  margin-right: 20px;
   height: 400px;
   box-shadow: 10px 10px 20px black;
 }
 
 .button-container {
   display: flex;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   justify-content: end;
   align-items: center;
 }
@@ -94,6 +97,30 @@
   color: #222;
 }
 
+
+
+/*---------------Media Queries iPad Pro---------------*/
+@media only screen and (max-width: 1366) {
+
+}
+
+
+/*---------------Media Queries iPad---------------*/
+@media only screen and (max-width: 1024) {
+
+}
+
+
+/*---------------Media Queries iPhone X---------------*/
+@media only screen and (max-width: 812) {
+
+}
+
+/*---------------Media Queries iPhone 6/7/8---------------*/
+@media only screen and (min-width: 667) {
+
+
+}
 @media (max-width: 1024px) {
   .name {
     font-size: 32px;
