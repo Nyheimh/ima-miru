@@ -5,7 +5,7 @@
 } */
 
 .footer {
-  display: flexbox;
+  /* display: flex; */
   position: absolute;
   width: 100vw;
   bottom: 0;
@@ -15,12 +15,27 @@
   background: black;
   /* margin-top: 0; */
   border: chartreuse 3px solid;
-  opacity: 0.6;
+  opacity: 0.8;
   color: white;
+
   /* height: 50px; */
   /* margin-top: -50px; */
 }
+/* .footer-text {
+  display: flex;
+  border: orange 3px solid;
+} */
 
+.footer-h5 {
+  border: red 3px solid;
+  display: flex;
+}
 
+.footer-link {
+  border: yellow 3px solid;
+  display: inline;
+  align-items: stretch;
+  justify-content: space-between;
+}
 
 /*---------------Media Queries iPad---------------*/

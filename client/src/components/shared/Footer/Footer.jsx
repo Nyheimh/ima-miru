@@ -10,6 +10,8 @@ const Footer = () => {
       <div class="footer-text">
         <h5 className="footer-h5">Developers :</h5>
       </div>
+      <div class="footer-links">
+        
       <a class="footer-link" href="https://github.com/Nyheimh" target="blank">
       <i class="fa fa-github"></i> " &nbsp; Nyheim Hunter"
       </a>
@@ -22,6 +24,7 @@ const Footer = () => {
       <a class="footer-link" href="https://github.com/Nyheimh" target="blank">
       <i class="fa fa-github"></i> " &nbsp; Jordan Montero "
       </a>
+      </div>
     </div>
   );
 }
