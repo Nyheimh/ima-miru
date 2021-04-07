@@ -12,7 +12,7 @@ const CarouselContainer = ({allShows}) => {
       <Carousel
         additionalTransfrom={0}
         arrows
-        autoPlay
+        // autoPlay
         autoPlaySpeed={3500}
         centerMode={false}
         className=""
@@ -27,17 +27,9 @@ const CarouselContainer = ({allShows}) => {
         renderButtonGroupOutside={false}
         renderDotsOutside={false}
         responsive={{
-          desktop: {
-            breakpoint: {
-              max: 1366,
-              min: 1018
-            },
-            items: 3,
-            partialVisibilityGutter: 40
-          },
           mobile: {
             breakpoint: {
-              max: 768,
+              max: 767,
               min: 0
             },
             items: 1,
@@ -46,10 +38,18 @@ const CarouselContainer = ({allShows}) => {
           tablet: {
             breakpoint: {
               max: 1017,
-              min: 815
+              min: 768
             },
             items: 2,
             partialVisibilityGutter: 30
+          },
+          desktop: {
+            breakpoint: {
+              max: 1366,
+              min: 1018
+            },
+            items: 3,
+            partialVisibilityGutter: 40
           }
         }}
         showDots={false}

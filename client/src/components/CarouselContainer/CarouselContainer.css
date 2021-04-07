@@ -25,7 +25,8 @@ img {
   img {
     height: 70vw;
     display: block;
-    margin: 0 auto;
+    margin: 15% auto;
+    height: 80%;
   }
   
 }
@@ -38,10 +39,6 @@ img {
     margin: 25px;
     padding-left: 5%;
     padding-right: 5%;
-  }
-
-  .slide {
-    
   }
 
 }
