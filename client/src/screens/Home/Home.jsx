@@ -1,4 +1,6 @@
 import Layout from '../../components/shared/Layout/Layout'
+import {useState, useEffect} from 'react'
+import { getShows } from "../../services/shows";
 import CarouselContainer from '../../components/CarouselContainer/CarouselContainer'
 
 const Home = ({user}) => {

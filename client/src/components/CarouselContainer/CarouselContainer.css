@@ -7,7 +7,11 @@ p {
 }
 
 img {
-  height: 75vh;
+  height: 40vw;
+  display: block;
+  margin: 0 auto;
+  /* width: auto; */
+  /* min-width: 30%; */
 }
 
 /*---------------CLASS---------------*/
@@ -16,8 +20,9 @@ img {
   margin: 5px auto; 
   width: 80%;
   /* height: auto; */
-  height: 200px;
-  color: black;
+  height: 75vh;
+  /* color: black;
+  overflow: hidden; */
 }
 
 /*---------------IDs---------------*/
@@ -26,11 +31,8 @@ img {
 
 /*---------------Media Queries iPad---------------*/
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 768px) {
 
-  .carousel {
-    width: 50%;
-  }
   
 }
 
@@ -39,7 +41,7 @@ img {
 @media only screen and (min-width: 1050px) {
 
   .carousel {
-    width: 40%;
+    width: 95%;
   }
   
 }
@@ -49,7 +51,7 @@ img {
 @media only screen and (min-width: 1200px) {
 
   .carousel {
-    width: 35%;
+    width: 90%;
   }
   
 }
