@@ -1,11 +1,12 @@
 import React from "react";
+import './Footer.css'
 
 const Footer = () => {
   return (
     <div className="footer">
-      <a href="#">
+      {/* <a href="#">
       <h1> Ima Miru </h1>
-      </a>
+      </a> */}
       <div class="footer-text">
         <h5 className="footer-h5">Developers :</h5>
       </div>
