@@ -71,7 +71,6 @@ const SignIn = (props) => {
             value={username}
             placeholder="Username"
             onChange={handleChange}
-            id="form-control"
 
           />
         </Form.Group>
@@ -84,7 +83,6 @@ const SignIn = (props) => {
             type="password"
             placeholder="Password"
             onChange={handleChange}
-            id="form-control"
 
           />
         </Form.Group>

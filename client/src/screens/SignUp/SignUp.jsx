@@ -71,7 +71,6 @@ const SignUp = (props) => {
             value={username}
             placeholder="Username"
             onChange={handleChange}
-            id="form-control"
           />
         </Form.Group>
         <Form.Group>
@@ -83,7 +82,6 @@ const SignUp = (props) => {
             value={email}
             placeholder="Enter email"
             onChange={handleChange}
-            id="form-control"
           />
         </Form.Group>
         <Form.Group>
@@ -95,7 +93,6 @@ const SignUp = (props) => {
             type="password"
             placeholder="Password"
             onChange={handleChange}
-            id="form-control"
           />
         </Form.Group>
         <Form.Group>
@@ -107,7 +104,6 @@ const SignUp = (props) => {
             type="password"
             placeholder="Confirm Password"
             onChange={handleChange}
-            id="form-control"
 
           />
         </Form.Group>
