@@ -29,8 +29,8 @@ const CarouselContainer = ({allShows}) => {
         responsive={{
           desktop: {
             breakpoint: {
-              max: 3000,
-              min: 1024
+              max: 1366,
+              min: 1018
             },
             items: 3,
             partialVisibilityGutter: 40
@@ -45,15 +45,15 @@ const CarouselContainer = ({allShows}) => {
           },
           tablet: {
             breakpoint: {
-              max: 1024,
-              min: 769
+              max: 1017,
+              min: 815
             },
             items: 2,
             partialVisibilityGutter: 30
           }
         }}
         showDots={false}
-        sliderClass=""
+        sliderClass="slide"
         slidesToSlide={1}
         swipeable
       >

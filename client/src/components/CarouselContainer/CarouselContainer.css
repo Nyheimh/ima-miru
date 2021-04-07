@@ -30,11 +30,20 @@ img {
   
 }
 
-/*---------------Media Queries Desktop---------------*/
+/*---------------Media Queries iPad Pro---------------*/
 
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 1017px) {
 
-  
+  .item {
+    margin: 25px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .slide {
+    
+  }
+
 }
 
 /*---------------Media Queries LargeDesktop---------------*/
