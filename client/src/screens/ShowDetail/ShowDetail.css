@@ -16,9 +16,13 @@
   align-items: stretch;
   grid-template-columns: 1fr 2fr;
   grid-gap: 10px;
+  width: 90%;
   align-self: center;
   padding: 20px;
-  margin-top: 50px;
+    /* display: flex; */
+  justify-content: center;
+  position: center;
+  /* margin-top: 50px; */
   background-color:  rgba(153, 178, 234, .7); 
   /* box-shadow: 10px 10px 10px ;rgba(220, 220, 220) */
   /* background-color: rgba(220, 220, 220, 0.5); */
@@ -26,13 +30,13 @@
   width: 1000px; */
   /* border: yellowgreen 5px solid; */
   justify-content: center;
-  margin: 20px;
+  /* margin: 20px; */
   border-radius: 25px;
 }
 
 .detail {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   align-content: space-between;
   padding-top: 50px;
   /* justify-content: center; */
@@ -63,6 +67,7 @@
 }
 
 .plot {
+  padding-top: 50px;
 }
 
 .anime-image {
@@ -75,7 +80,7 @@
 
 .button-container {
   display: flex;
-  /* margin-top: 20px; */
+  padding-top: 200px;
   justify-content: end;
   align-items: center;
 }
@@ -100,8 +105,10 @@
 
 
 /*---------------Media Queries iPad Pro---------------*/
-@media only screen and (max-width: 1366) {
-
+@media only screen and (min-width: 1680) {
+.detail {
+  flex-flow: column wrap;
+}
 }
 
 
