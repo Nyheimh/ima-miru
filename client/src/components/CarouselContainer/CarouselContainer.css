@@ -1,25 +1,17 @@
 
 /*---------------TAGS---------------*/
 
-h3,
-p {
-  color: black;
-}
-
 img {
-  height: 75vh;
-  /* height: 25%!important; */
+  height: 100vw;
+  display: block;
+  margin: 0 auto;
 }
 
 /*---------------CLASS---------------*/
 
 .carousel {
-  margin: 5px auto; 
-  width: 80%;
-  height: auto;
-  /* height: 50vh; */
-  color: black;
-
+  margin: 23% auto;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /*---------------IDs---------------*/
@@ -28,30 +20,31 @@ img {
 
 /*---------------Media Queries iPad---------------*/
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 768px) {
 
-  .carousel {
-    width: 50%;
+  img {
+    height: 70vw;
+    margin: 15% auto;
+    height: 80%;
   }
   
 }
 
-/*---------------Media Queries Desktop---------------*/
+/*---------------Media Queries iPad Pro---------------*/
 
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 1024px) {
 
-  .carousel {
-    width: 40%;
+  .item {
+    display: inline;
+    text-align: center;
   }
-  
+
 }
 
 /*---------------Media Queries LargeDesktop---------------*/
 
 @media only screen and (min-width: 1200px) {
 
-  .carousel {
-    width: 35%;
-  }
+
   
 }

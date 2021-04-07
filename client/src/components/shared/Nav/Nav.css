@@ -7,7 +7,7 @@
 
 .nav {
     padding: 10px 20px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.99);
     opacity: 0.6;
     color: white;
 }
@@ -15,14 +15,17 @@
 .links {
     display: inline;
     font-size: 17px;
+
     margin:  auto 0;
     margin-left: 20px;
     width: 100%;
 }
 
 .userWelcome {
-    padding-left: 200px;
-    justify-content: right;
+    display: flex;
+    justify-content: space-between;
+    /* padding-left: 220px; */
+    margin-right: 0px;
 }
 
 .navOptions {
@@ -45,7 +48,6 @@
     font-size: 30px;
 }
 
-
 /*---------------Media Queries iPad---------------*/
 
 @media only screen and (min-width: 768px) {
@@ -57,40 +59,39 @@
     }
 
     .links {
-        font-size: px;
+        font-size: 23px;
         width: 50%;
     }
-    
+
     #appName {
-        font-size: 55px;
+        font-size: 45px;
     }
 
 }
 
-/*---------------Media Queries Desktop---------------*/
+/*---------------Media Queries iPad Pro---------------*/
 
-@media only screen and (min-width: 1776px) {
+@media only screen and (min-width: 1024px) {
 
     .links {
-        font-size: 25px;
-        width: 25%;
+        font-size: 30px;
+        width: 45%;
     }
 
-    .userWelcome {
-        padding-left: 250px;
-    }
+    /* .userWelcome {
+        padding-left: 255px;
+    } */
 
     #appName {
-
-        font-size: 70px;
+        font-size: 60px;
     }
 
 }
 
-/*---------------Media Queries Bigger Desktop---------------*/
+/*---------------Media Queries Laptop---------------*/
 
 
-@media only screen and (min-width: 1792px) {
+@media only screen and (min-width: 1366) {
     .links {
         font-size: 50px;
         width: 25%;
