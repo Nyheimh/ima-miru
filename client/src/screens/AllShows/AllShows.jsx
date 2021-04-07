@@ -24,7 +24,7 @@ const AllShows = ({ user }) => {
   const filteredImages = queriedShows.filter((val2) => {
     return val2.title.toLowerCase().includes(search.toLowerCase());
   });
-  //2 make your above filter map all the images and then when you type in the field it filters the images//
+  //3 make your above filter map all the images and then when you type in the field it filters the images//
   const showJSX = filteredImages.map((show, index) => (
     <Show _id={show._id} title={show.title} imgURL={show.imgURL} key={index} />
   ));
@@ -32,7 +32,7 @@ const AllShows = ({ user }) => {
   return (
     <div>
       <Layout user={user}>
-        All Shows
+        
         <input
           id="search"
           type="text"
@@ -46,4 +46,22 @@ const AllShows = ({ user }) => {
   );
 };
 
-export default AllShows;
+  
+
+//     return (
+//         <div>  
+//             <Layout user = {user}>
+          
+//                 <input id="search" type="text" placeholder="search" value={search} onChange={(e) => setSearch(e.target.value)} />
+          
+//           <div className="shows">
+            
+//               {showJSX}
+             
+//                 </div>
+//             </Layout>
+//         </div>
+//     )
+// }
+
+export default AllShows
