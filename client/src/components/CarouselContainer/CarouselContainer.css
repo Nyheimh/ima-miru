@@ -24,13 +24,9 @@ img {
 @media only screen and (min-width: 768px) {
 
   img {
-    width: 95%;
-    height: 95%;
+    width: 90%;
+    height: 90%;
   }
-
-  /* .container-with-dots {
-    height: 90vw;
-  } */
 
   .container-with-dots {
     height: 90%;
@@ -46,9 +42,7 @@ img {
 
 @media only screen and (min-width: 1300px) {
 
-  /* .container-with-dots {
-    height: 55vw;
-  } */
+
 
 }
 
@@ -56,9 +50,7 @@ img {
 
 @media only screen and (min-width: 1801px) {
 
-  /* .container-with-dots {
-    height: 50vw;
-  } */
+
 
 }
 
@@ -66,8 +58,6 @@ img {
 
 @media only screen and (min-width: 2001px) {
 
-  /* .container-with-dots {
-    height: 65%;
-  } */
+
 
 }

@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 // import Card from 'react-bootstrap/Card'
 import './CarouselContainer.css'
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css';
 
 const CarouselContainer = ({ allShows }) => {
+  const history = useHistory()
 
-  console.log(allShows)
+  const onSelect = (title) => {
+    const selectedShow = allShows.find(show => show.title === title)
+    history.push(`/shows/${selectedShow._id}`)
+  }
 
   return (
     <div className="carousel">
@@ -92,60 +96,50 @@ const CarouselContainer = ({ allShows }) => {
         swipeable
       >
 
-        <Link to={`/shows/606e5bab7236f659aa04faac`}>
-          <img className="image"
-            src="http://cdn.shopify.com/s/files/1/0630/8509/products/pst2318vk_grande.jpeg?v=1467482965"
-            alt="Vampire Knight"
-          />
-        </Link>
-        <Link to={`/shows/606e5bab7236f659aa04faad`}>
-          <img className="image"
-            src="https://render.fineartamerica.com/images/rendered/default/poster/8/10/break/images/artworkimages/medium/3/tokyo-ghoul-guerrero-leonore.jpg"
-            alt="Tokyo Ghoul"
-          />
-        </Link>
-        <Link to={`/shows/606e5bab7236f659aa04faaf`}>
-          <img className="image"
-            src="https://m.media-amazon.com/images/M/MV5BZDkzZjZlZmItM2E1OC00Y2M3LTljNGUtYzg4ZTUxNGY3MmNhXkEyXkFqcGdeQXVyMTA3OTEyODI1._V1_.jpg"
-            alt="Elemental Gelade"
-          />
-        </Link>
-        <Link to={`/shows/606e5bab7236f659aa04fab7`}>
-          <img className="image"
-            src="https://images-na.ssl-images-amazon.com/images/I/81dH7-pkjiL._AC_SY679_.jpg"
-            alt="Attack on Titan"
-          />
-        </Link>
-        <Link to={`/shows/606e5bab7236f659aa04fab1`}>
-          <img className="image"
-            src="https://i.pinimg.com/564x/d5/53/66/d5536643c2fb667f8cad981c0af76a4a.jpg"
-            alt="Dragon Ball GT"
-          />
-        </Link>
-        <Link to={`/shows/606e5bab7236f659aa04fab2`}>
-          <img className="image"
-            src="https://m.media-amazon.com/images/M/MV5BZTViMTZlMjgtNjVmZC00NjEzLWJlN2QtMjQ4ZTYxNzBiZmMyXkEyXkFqcGdeQXVyNjc2NjA5MTU@._V1_UY1200_CR85,0,630,1200_AL_.jpg"
-            alt="Parasyte"
-          />
-        </Link>
-        <Link to={`/shows/606e5bab7236f659aa04fab6`}>
-          <img className="image"
-            src="https://images-na.ssl-images-amazon.com/images/I/717aat3l-YL._AC_SL1224_.jpg"
-            alt="One Punch Man"
-          />
-        </Link>
-        <Link to={`/shows/606e5bab7236f659aa04fab3`}>
-          <img className="image"
-            src="https://images-na.ssl-images-amazon.com/images/I/91kjVOEopVL._AC_SL1500_.jpg"
-            alt="My Hero Academia"
-          />
-        </Link>
-        <Link to={`/shows/606e5bab7236f659aa04fab4`}>
-          <img className="image"
-            src="https://images-na.ssl-images-amazon.com/images/I/61Zm2hsRJ0L._AC_SL1024_.jpg"
-            alt="Demon Slayer: Kimetsu no Yaiba"
-          />
-        </Link>
+        <img className="image" onClick={() => { onSelect("Vampire Knight") }}
+          src="http://cdn.shopify.com/s/files/1/0630/8509/products/pst2318vk_grande.jpeg?v=1467482965"
+          alt="Vampire Knight"
+        />
+
+        <img className="image" onClick={() => { onSelect("Tokyo Ghoul") }}
+          src="https://render.fineartamerica.com/images/rendered/default/poster/8/10/break/images/artworkimages/medium/3/tokyo-ghoul-guerrero-leonore.jpg"
+          alt="Tokyo Ghoul"
+        />
+
+        <img className="image" onClick={() => { onSelect("Elemental Gelade") }}
+          src="https://m.media-amazon.com/images/M/MV5BZDkzZjZlZmItM2E1OC00Y2M3LTljNGUtYzg4ZTUxNGY3MmNhXkEyXkFqcGdeQXVyMTA3OTEyODI1._V1_.jpg"
+          alt="Elemental Gelade"
+        />
+
+        <img className="image" onClick={() => { onSelect("Attack on Titan") }}
+          src="https://images-na.ssl-images-amazon.com/images/I/81dH7-pkjiL._AC_SY679_.jpg"
+          alt="Attack on Titan"
+        />
+
+        <img className="image" onClick={() => { onSelect("Dragon Ball GT") }}
+          src="https://i.pinimg.com/564x/d5/53/66/d5536643c2fb667f8cad981c0af76a4a.jpg"
+          alt="Dragon Ball GT"
+        />
+
+        <img className="image" onClick={() => { onSelect("Parasyte") }}
+          src="https://m.media-amazon.com/images/M/MV5BZTViMTZlMjgtNjVmZC00NjEzLWJlN2QtMjQ4ZTYxNzBiZmMyXkEyXkFqcGdeQXVyNjc2NjA5MTU@._V1_UY1200_CR85,0,630,1200_AL_.jpg"
+          alt="Parasyte"
+        />
+
+        <img className="image" onClick={() => { onSelect("One Punch Man") }}
+          src="https://images-na.ssl-images-amazon.com/images/I/717aat3l-YL._AC_SL1224_.jpg"
+          alt="One Punch Man"
+        />
+
+        <img className="image" onClick={() => { onSelect("My Hero Academia") }}
+          src="https://images-na.ssl-images-amazon.com/images/I/91kjVOEopVL._AC_SL1500_.jpg"
+          alt="My Hero Academia"
+        />
+
+        <img className="image" onClick={() => { onSelect("Demon Slayer: Kimetsu no Yaiba") }}
+          src="https://images-na.ssl-images-amazon.com/images/I/61Zm2hsRJ0L._AC_SL1024_.jpg"
+          alt="Demon Slayer: Kimetsu no Yaiba"
+        />
       </Carousel>
     </div>
   )
