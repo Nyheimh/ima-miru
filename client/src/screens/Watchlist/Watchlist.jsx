@@ -28,6 +28,7 @@ const Watchlist = ({ user }) => {
 
   return (
     <Layout user={user}>
+      <h3 className= "watchlist-title">Watchlist</h3>
       <div className="shows">
         {showJSX}
       </div>

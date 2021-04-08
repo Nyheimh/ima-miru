@@ -7,10 +7,11 @@ const Show = ({title, imgURL, _id}) => {
         <div className="product">
             <Link to={`/shows/${_id}`}>
             <img src={imgURL} alt={title} />
-            <div className= "testing">
-                <p className="title-card"> {title} </p>
+            <div className="testing">
+              
+              <p className="title-card"> {title.length >= 16 ? `${title.substring(0,13)}...` : title} </p>
+              
             </div>
-
           </Link>
           </div>
         </>
