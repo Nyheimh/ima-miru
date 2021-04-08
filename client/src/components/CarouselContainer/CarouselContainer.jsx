@@ -1,24 +1,35 @@
-import React from 'react'
-// import Card from 'react-bootstrap/Card'
+import React, {useState} from 'react'
 import './CarouselContainer.css'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link} from 'react-router-dom'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css';
 
 const CarouselContainer = ({ allShows }) => {
   const history = useHistory()
+  const [carouselImages, setCarouselImages] = useState([])
 
   const onSelect = (title) => {
     const selectedShow = allShows.find(show => show.title === title)
     history.push(`/shows/${selectedShow._id}`)
   }
 
+  // allShows.map(show => {
+  //   setCarouselImages.push(
+  //     <Link to={`/shows/${show._id}`} className="image">
+  //       <img 
+  //         src={show.plot}
+  //         alt={show.title}
+  //       />
+  //     </Link>
+  //   )
+  // })
+
   return (
     <div className="carousel">
       <Carousel
         additionalTransfrom={0}
         arrows
-        // autoPlay
+        autoPlay
         autoPlaySpeed={3500}
         centerMode={false}
         className="hi"
@@ -95,6 +106,8 @@ const CarouselContainer = ({ allShows }) => {
         slidesToSlide={1}
         swipeable
       >
+
+        {/* {carouselImages} */}
 
         <img className="image" onClick={() => { onSelect("Vampire Knight") }}
           src="http://cdn.shopify.com/s/files/1/0630/8509/products/pst2318vk_grande.jpeg?v=1467482965"
