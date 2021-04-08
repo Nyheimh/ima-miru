@@ -36,11 +36,14 @@ function ShowDetail({ user }) {
         
             <img className="anime-image" src={show.imgURL} alt={show.title} />
           <div className="detail">
+            <div className="block">
+
             <div className="title-duration">
             <div className="title">{show.title}</div>
             <div className="duration">
               <strong>({`${show.duration}`})</strong>
             <div className="plot">{show.plot}</div>
+            </div>
             </div>
             </div>
         <div className="button-container">
