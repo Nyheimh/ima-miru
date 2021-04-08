@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import { getShow, deleteShow } from "../../services/shows";
+import { addToWatchlist } from "../../services/users";
 import { useParams, Link, useHistory } from "react-router-dom";
 import "./ShowDetail.css";
 
@@ -18,6 +19,13 @@ function ShowDetail({ user }) {
     };
     fetchShow();
   }, [id]);
+  
+  const handleWatchlist = (e) => {
+    e.preventDefault();
+    console.log(user.id, show._id)
+    addToWatchlist(user.id, show._id)
+  
+  }
 
   const handleDelete = (e) => {
     e.preventDefault();
@@ -46,8 +54,9 @@ function ShowDetail({ user }) {
             </div>
             </div>
             </div>
-        <div className="button-container">
-          <button className="edit-button">
+            <div className="button-container">
+              <button className= "watchlist-button" onClick={handleWatchlist}>+ Watchlist</button>
+              <button className="edit-button">
             <Link className="edit-link" to={`/shows/${show._id}/edit`}>
               Edit
             </Link>
