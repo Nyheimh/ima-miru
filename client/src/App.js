@@ -52,7 +52,8 @@ function App() {
           <AllShows user={user} />
         </Route>
         <Route exact path="/shows/:id">
-           <ShowDetail user={user} />
+          {/* {user ? <ShowDetail user={user} /> : <ShowDetail user={user} />} */}
+          <ShowDetail user={user}/>
         </Route>
         <Route path="/create-show">
           {user ? <CreateShow user={user} /> : <Redirect to="/sign-up" />}

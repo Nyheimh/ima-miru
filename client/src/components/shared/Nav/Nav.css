@@ -9,8 +9,6 @@
 .nav {
     padding: 10px 20px;
     background-color: rgba(0, 0, 0, 0.5);
-    /* opacity: 0.6; */
-    /* color: white; */
 }
 
 .links {
@@ -25,13 +23,11 @@
 .links :hover {
   text-decoration: none;
 }
+
 .nav a {
   color: white;
 }
 
-a :hover {
-  color: red;
-}
 .userWelcome {
     display: flex;
     justify-content: space-between;

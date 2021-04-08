@@ -1,12 +1,6 @@
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Shojumaru&display=swap');
 
 .footer {
-  /* padding-top: 25px; */
-  /* position: absolute; */
   width: 100vw;
   padding-top: 5px;
   margin-top: 100px;
@@ -14,24 +8,13 @@
   left: 0;
   background-color: rgba(0, 0, 0, 0.99);
   opacity: 0.6;
-  /* border: chartreuse 3px solid; */
   color: white;
-  /* margin: 0 auto; */
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 .footer-h5 {
-  /* border: red 3px solid; */
   display: flex;
 }
-
-.footer-link {
-  /* border: yellow 3px solid;ç */
-  display: inline;
-  align-items: stretch;
-  justify-content: space-between;
-  color: white;
-}
-
 
 .footer-links {
   color: white;
@@ -40,6 +23,13 @@
   justify-content: space-between;
   width: 40%;
   margin: 0 auto;
+}
+
+.footer-link {
+  display: inline;
+  align-items: stretch;
+  justify-content: space-between;
+  color: white;
 }
 
 .fa {
