@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Redirect } from "react-router-dom";
+import { useParams, Redirect, Link } from "react-router-dom";
 import { getShow, updateShow } from "../../services/shows";
 import Layout from "../../components/shared/Layout/Layout";
 import { Button, Form } from "react-bootstrap";
+import "./EditShow.css";
+import "../ShowDetail/ShowDetail.css";
 
 const EditShow = (props) => {
   const [show, setShow] = useState({
@@ -41,58 +43,64 @@ const EditShow = (props) => {
   }
   return (
     <Layout user={props.user}>
-      <Form className="editShow-form-container" onSubmit={handleSubmit}>
-        <img className="edit-show-image" src={show.imgURL} alt={show.title} />
-        <Form.Group>
-          <Form.Label>Title:</Form.Label>
-          <Form.Control
-            className="input-title"
-            placeholder="Title"
-            value={show.title}
-            name="title"
-            required
-            autoFocus
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label>Duration:</Form.Label>
-          <Form.Control
-            className="input-duration"
-            placeholder="Duration"
-            value={show.duration}
-            name="duration"
-            required
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label>Image URL:</Form.Label>
-          <Form.Control
-            className="input-image-link"
-            placeholder="Image Address URL"
-            value={show.imgURL}
-            name="imgURL"
-            required
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label>Plot Summary:</Form.Label>
-          <Form.Control
-            className="textarea-plot"
-            // rows={10}
-            // type="text-area"
-            placeholder="Plot"
-            value={show.plot}
-            name="plot"
-            required
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Button type="submit" className="submit-button">
-          Submit
-        </Button>
+      <Form className="show-detail" onSubmit={handleSubmit}>
+        <div className="image-container">
+          <img className="current-image" src={show.imgURL} alt={show.title} />
+            <input
+              className="image-input"
+              value={show.imgURL}
+              name="imgURL"
+              required
+              onChange={handleChange}
+            />
+          {/* </label> */}
+        </div>
+
+        <div className="detail">
+          <div className="title-duration">
+            <div className="title">
+              <input
+                value={show.title}
+                name="title"
+                required
+                autoFocus
+                onChange={handleChange}
+              />
+            </div>
+            <div className="duration">
+              <input
+                value={show.duration}
+                name="duration"
+                required
+                onChange={handleChange}
+              />
+            </div>
+            <div className="plot">
+              <textarea
+                rows="6"
+                type="text"
+                value={show.plot}
+                name="plot"
+                required
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+          <div className="button-container">
+            <Button id="submit-button" type="submit" className="submit-button">
+              Submit Changes
+            </Button>
+            <Link to={`/shows/${show._id}`}>
+              <Button
+                id="cancel-button"
+                type="submit"
+                className="submit-button"
+              >
+                Cancel
+              </Button>
+            </Link>
+          </div>
+        </div>
       </Form>
     </Layout>
   );
@@ -100,3 +108,56 @@ const EditShow = (props) => {
 
 export default EditShow;
 
+{
+  /* <Layout user={props.user}>
+<Form className="show-detail" onSubmit={handleSubmit}>
+
+    <img className="anime-image" src={show.imgURL} alt={show.title} />
+    <div className="detail">
+
+  <Form.Group className="title-duration">
+    <Form.Control
+      className="title"
+      placeholder="Title"
+      value={show.title}
+      name="title"
+      required
+      autoFocus
+      onChange={handleChange}
+      />
+    <Form.Control
+      className="duration"
+      placeholder="Duration"
+      value={show.duration}
+      name="duration"
+      required
+      onChange={handleChange}
+      />
+  </Form.Group>
+  <Form.Group>
+    <Form.Control
+      className="input-image-link"
+      value={show.imgURL}
+      name="imgURL"
+      required
+      onChange={handleChange}
+      />
+  </Form.Group>
+  <Form.Group>
+    <textarea
+      className="plot"
+      rows="6"
+      type="text"
+      value={show.plot}
+      name="plot"
+      required
+      onChange={handleChange}
+      />
+  </Form.Group>
+  <Button type="submit" className="submit-button">
+    Submit
+  </Button>
+      </div>
+</Form>
+</Layout> */
+}

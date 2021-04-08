@@ -1,0 +1,36 @@
+.image-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+input, textarea {
+  border: none;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  background: none;
+  color: white;
+}
+textarea {
+  width: 100%;
+  font-size: 50px;
+}
+.current-image {
+  width: 400px;
+  margin-right: 20px;
+  height: 400px;
+  box-shadow: 10px 10px 20px black;
+}
+.image-input {
+  margin-left: 340px;
+  margin-right: 10px;
+  margin-top: -80px;
+}
+@media (max-width: 800px) {
+  .current-image {
+    width: 300px;
+    margin: 15px;
+    padding: 10px;
+  }
+}
