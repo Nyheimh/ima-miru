@@ -16,6 +16,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [user, setUser] = useState(null);
+  const [watchlistShows, setWatchlistShows] = useState([]);
 
   useEffect(() => {
     //this useeffect allows the user to persist even after a page reload
@@ -53,7 +54,7 @@ function App() {
         </Route>
         <Route exact path="/shows/:id">
           {/* {user ? <ShowDetail user={user} /> : <ShowDetail user={user} />} */}
-          <ShowDetail user={user}/>
+          <ShowDetail user={user} watchlistShows={watchlistShows}/>
         </Route>
         <Route path="/create-show">
           {user ? <CreateShow user={user} /> : <Redirect to="/sign-up" />}
@@ -62,7 +63,7 @@ function App() {
           {user ? <EditShow user={user} /> : <Redirect to="/" />}
         </Route>
         <Route exact path="/watchlist">
-          {user ? <Watchlist user={user} /> : <Redirect to="/"/>}
+          {user ? <Watchlist user={user} watchlistShows={watchlistShows} setWatchlistShows={setWatchlistShows}/> : <Redirect to="/"/>}
         </Route>
       </Switch>
     </div>

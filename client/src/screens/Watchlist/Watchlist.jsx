@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 import { getUserWatchlist } from "../../services/users";
 import "./Watchlist.css";
 
-const Watchlist = ({ user }) => {
-  const [watchlistShows, setWatchlistShows] = useState([]);
+const Watchlist = ({ user, watchlistShows, setWatchlistShows }) => {
+  // const [watchlistShows, setWatchlistShows] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {

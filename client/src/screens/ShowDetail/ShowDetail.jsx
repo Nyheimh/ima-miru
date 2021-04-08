@@ -6,7 +6,7 @@ import { useParams, Link, useHistory, useLocation } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import "./ShowDetail.css";
 
-function ShowDetail({ user }) {
+function ShowDetail({ user, watchlistShows }) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [show, setShow] = useState(null);
   const [inWatchlist, setInWatchlist] = useState(false);
@@ -17,23 +17,22 @@ function ShowDetail({ user }) {
   useEffect(() => {
     const fetchShow = async () => {
       const anime = await getShow(id);
+      console.log(anime)
       setShow(anime);
       setIsLoaded(true);
     };
     fetchShow();
   }, [id]);
 
-  // useEffect(() => {
-  //   const checkWatchlist = async () => {
-  //     const shows = await getUserWatchlist(user.id);
-  //     // console.log(shows)
-  //     const show = shows.find(show => (show.id === id))
-  //     if (show) {
-  //       setInWatchlist(true)
-  //     }
-  //   };
-  //   checkWatchlist();
-  // }, []);
+  useEffect(() => {
+    const checkWatchlist = () => {
+      const show = watchlistShows.find(show => (show.id === id))
+      if (show) {
+        setInWatchlist(true)
+      }
+    };
+    checkWatchlist();
+  }, []);
   
 
   const handleWatchlist = (e) => {
@@ -58,25 +57,25 @@ function ShowDetail({ user }) {
         <div className="show-detail">
           <img className="anime-image" src={show.imgURL} alt={show.title} />
           <div className="detail">
-            <div className="block">
-              <div className="title-duration">
+            {/* <div className="block"> */}
+              <div className="info-container">
                 <div className="title">{show.title}</div>
                 <div className="duration">
                   <strong>({`${show.duration}`})</strong>
-                  <div className="plot">{show.plot}</div>
                 </div>
+                  <div className="plot">{show.plot}</div>
               </div>
-            </div>
+            {/* </div> */}
             <div className="button-container">
-              {user ? <Button className="watchlist-button" onClick={handleWatchlist}>
+              {user && !inWatchlist ? <Button className="watchlist-button" onClick={handleWatchlist}>
                 + Watchlist
               </Button> : null}
-              <Button className="edit-button">
+              <Button id = "edit-button" className="edit-button">
                 <Link className="edit-link" to={`/shows/${show._id}/edit`}>
                   Edit
                 </Link>
               </Button>
-              <Button className="delete-button" onClick={handleDelete}>
+              <Button id="delete-button" onClick={handleDelete}>
                 Delete
               </Button>
             </div>
