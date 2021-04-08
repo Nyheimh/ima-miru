@@ -12,7 +12,7 @@ img {
 .carousel {
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.5);
-  width: 80%;
+  width: 90%;
 }
 
 /*---------------IDs---------------*/
@@ -24,21 +24,50 @@ img {
 @media only screen and (min-width: 768px) {
 
   img {
-    /* height: 70vw; */
-    height: 50%;
-    margin: 15% auto;
-    height: 80%;
+    width: 95%;
+    height: 95%;
   }
-  
+
+  /* .container-with-dots {
+    height: 90vw;
+  } */
+
+  .container-with-dots {
+    height: 90%;
+  }
+
+  .image {
+    margin-top: 10%;
+  }
+
 }
 
-/*---------------Media Queries iPad Pro---------------*/
+/*---------------Media Queries Desktop---------------*/
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1300px) {
 
-  .item {
-    display: inline;
-    text-align: center;
-  }
+  /* .container-with-dots {
+    height: 55vw;
+  } */
+
+}
+
+/*---------------Media Queries Desktop1---------------*/
+
+@media only screen and (min-width: 1801px) {
+
+  /* .container-with-dots {
+    height: 50vw;
+  } */
+
+}
+
+/*---------------Media Queries Desktop2---------------*/
+
+@media only screen and (min-width: 2001px) {
+
+  /* .container-with-dots {
+    height: 65%;
+  } */
 
 }
