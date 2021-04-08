@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Shojumaru&display=swap');
 /*---------------TAGS---------------*/
 
 
@@ -12,10 +12,14 @@
     color: white;
     font-weight: bold;
     font-size: 13px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-shadow: black 2px 2px 4px;
 }
 
 /*---------------IDs---------------*/
-
+#fan-favorites {
+  font-size: 10px;
+}
 
 
 /*---------------Media Queries iPad---------------*/
@@ -25,6 +29,9 @@
     .homeStatement {
         /* margin: 50px 15px; */
         font-size: 25px;
+    }
+    #fan-favorites {
+      font-size: 15px;
     }
 
 }
@@ -37,6 +44,9 @@
         /* margin: 85px 15px; */
         font-size: 35px;
     }
+    #fan-favorites {
+      font-size: 25px;
+    }
 
 }
 
@@ -48,5 +58,9 @@
     .homeStatement {
         /* margin: 85px 15px; */
         font-size: 55px;
+    }
+    #fan-favorites {
+      font-size: 40px;
+      margin-bottom: 20px; 
     }
 }

@@ -19,7 +19,8 @@ useEffect(() => {
         <div>
             {allShows && <Layout user={user}>
                 <h3 className="homeStatement">The number one spot to find the next series to binge watch!</h3>
-                {allShows && < CarouselContainer allShows={allShows}/>}
+                <h4 className="homeStatement" id = "fan-favorites">Here are some fan favorites</h4>
+            {allShows && < CarouselContainer allShows={allShows} />}
             </Layout>}
         </div>
     )

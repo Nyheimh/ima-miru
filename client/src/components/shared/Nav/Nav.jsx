@@ -4,27 +4,27 @@ import { NavLink } from "react-router-dom";
 
 const authenticatedOptions = (
   <>
-    <NavLink to="/create-show">
+    <NavLink id ="add-show" to="/create-show">
       Add Show
     </NavLink>
-    <NavLink to="/sign-out">
+    <NavLink id="sign-out" to="/sign-out">
       Sign Out
     </NavLink>
   </>
 );
 const unauthenticatedOptions = (
   <>
-    <NavLink  to="/sign-up">
+    <NavLink id="sign-up" to="/sign-up">
       Sign Up
     </NavLink>
-    <NavLink to="/sign-in">
+    <NavLink id="sign-in" to="/sign-in">
       Sign In
     </NavLink>
   </>
 );
 const alwaysOptions = (
   <div id="alwaysOptions">
-    <NavLink to="/shows">
+    <NavLink className="all-shows" to="/shows">
       All Shows
     </NavLink>
   </div>
