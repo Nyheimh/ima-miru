@@ -12,7 +12,7 @@ const Footer = () => {
       </div> */}
       <div className="footer-links">
   
-        <h5 className="footer-h5">Developers :</h5>
+        <h5 className="footer-h5">Developers:</h5>
       <a class="footer-link" href="https://www.linkedin.com/in/andri-rafti-770b49126/" target="blank"> Andri Rafti
       <i id="icon" className="fa fa-linkedin" aria-hidden="true"></i>
       </a>
