@@ -12,17 +12,17 @@ const Footer = () => {
       </div> */}
       <div className="footer-links">
   
-        <h5 className="footer-h5">Developers:</h5>
-      <a class="footer-link" href="https://www.linkedin.com/in/andri-rafti-770b49126/" target="blank"> Andri Rafti
+        <h5 className="footer-h5">Created by:</h5>
+      <a className="footer-link" href="https://www.linkedin.com/in/andri-rafti-770b49126/" target="blank"> Andri Rafti
       <i id="icon" className="fa fa-linkedin" aria-hidden="true"></i>
       </a>
-      <a class="footer-link" href="https://www.linkedin.com/in/irma-leandre-660313154/" target="blank"> Irma Leandre
+      <a className="footer-link" href="https://www.linkedin.com/in/irma-leandre-660313154/" target="blank"> Irma Leandre
       <i id="icon" className="fa fa-linkedin" aria-hidden="true"></i> 
       </a>
-      <a class="footer-link" href="https://www.linkedin.com/in/jordanmontero96/" target="blank"> Jordan Montero
+      <a className="footer-link" href="https://www.linkedin.com/in/jordanmontero96/" target="blank"> Jordan Montero
       <i id="icon" className="fa fa-linkedin" aria-hidden="true"></i>
       </a>
-      <a class="footer-link" href="https://www.linkedin.com/in/nyheimhunter/" target="blank"> Nyheim Hunter
+      <a className="footer-link" href="https://www.linkedin.com/in/nyheimhunter/" target="blank"> Nyheim Hunter
       <i id="icon" className="fa fa-linkedin" aria-hidden="true"></i>  
       </a>
       </div>

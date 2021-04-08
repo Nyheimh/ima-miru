@@ -48,7 +48,6 @@ a :hover {
     justify-content: space-between;
 }
 
-
 .links a {
     display: inline;
 }
@@ -109,7 +108,7 @@ a :hover {
 @media only screen and (min-width: 1366px) {
     .links {
         font-size: 30px;
-        width: 30%;
+        width: 45%;
     }
 
     #appName {
@@ -123,7 +122,6 @@ a :hover {
 @media only screen and (min-width: 1801px) {
     .links {
         font-size: 40px;
-        width: 30%;
     }
 
     #appName {

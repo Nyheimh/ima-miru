@@ -9,5 +9,5 @@ router.get('/verify', controllers.verify)
 router.post('/change-password', controllers.changePassword)
 router.put('/users/:id/add-to-watchlist/:showId', controllers.addToWatchlist)
 // Grab a specific user so we can access their watchlist array and display their shows
-// router.get('/users/:id', controllers.getUserWatchlist)
+router.get('/users/:id', controllers.getUserWatchlist)
 module.exports = router

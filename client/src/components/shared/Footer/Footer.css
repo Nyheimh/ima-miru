@@ -16,6 +16,7 @@
   opacity: 0.6;
   /* border: chartreuse 3px solid; */
   color: white;
+  /* margin: 0 auto; */
 }
 
 .footer-h5 {
@@ -37,6 +38,8 @@
   text-decoration: none;
   display: flex;
   justify-content: space-between;
+  width: 40%;
+  margin: 0 auto;
 }
 
 .fa {

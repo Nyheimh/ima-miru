@@ -1,15 +1,18 @@
 import { useState, useEffect } from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import { getShow, deleteShow } from "../../services/shows";
-import { addToWatchlist } from "../../services/users";
-import { useParams, Link, useHistory } from "react-router-dom";
+import { addToWatchlist, getUserWatchlist } from "../../services/users";
+import { useParams, Link, useHistory, useLocation } from "react-router-dom";
+import { Button } from "react-bootstrap";
 import "./ShowDetail.css";
 
 function ShowDetail({ user }) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [show, setShow] = useState(null);
+  const [inWatchlist, setInWatchlist] = useState(false);
   const { id } = useParams();
   const history = useHistory();
+  const location = useLocation();
 
   useEffect(() => {
     const fetchShow = async () => {
@@ -19,13 +22,25 @@ function ShowDetail({ user }) {
     };
     fetchShow();
   }, [id]);
+
+  // useEffect(() => {
+  //   const checkWatchlist = async () => {
+  //     const shows = await getUserWatchlist(user.id);
+  //     // console.log(shows)
+  //     const show = shows.find(show => (show.id === id))
+  //     if (show) {
+  //       setInWatchlist(true)
+  //     }
+  //   };
+  //   checkWatchlist();
+  // }, []);
   
+
   const handleWatchlist = (e) => {
     e.preventDefault();
-    console.log(user.id, show._id)
-    addToWatchlist(user.id, show._id)
-  
-  }
+    console.log(user.id, show._id);
+    addToWatchlist(user.id, show._id);
+  };
 
   const handleDelete = (e) => {
     e.preventDefault();
@@ -41,30 +56,30 @@ function ShowDetail({ user }) {
     <div>
       <Layout user={user}>
         <div className="show-detail">
-        
-            <img className="anime-image" src={show.imgURL} alt={show.title} />
+          <img className="anime-image" src={show.imgURL} alt={show.title} />
           <div className="detail">
             <div className="block">
-
-            <div className="title-duration">
-            <div className="title">{show.title}</div>
-            <div className="duration">
-              <strong>({`${show.duration}`})</strong>
-            <div className="plot">{show.plot}</div>
-            </div>
-            </div>
+              <div className="title-duration">
+                <div className="title">{show.title}</div>
+                <div className="duration">
+                  <strong>({`${show.duration}`})</strong>
+                  <div className="plot">{show.plot}</div>
+                </div>
+              </div>
             </div>
             <div className="button-container">
-              <button className= "watchlist-button" onClick={handleWatchlist}>+ Watchlist</button>
-              <button className="edit-button">
-            <Link className="edit-link" to={`/shows/${show._id}/edit`}>
-              Edit
-            </Link>
-          </button>
-          <button className="delete-button" onClick={handleDelete}>
-            Delete
-          </button>
-          </div>
+              {user ? <Button className="watchlist-button" onClick={handleWatchlist}>
+                + Watchlist
+              </Button> : null}
+              <Button className="edit-button">
+                <Link className="edit-link" to={`/shows/${show._id}/edit`}>
+                  Edit
+                </Link>
+              </Button>
+              <Button className="delete-button" onClick={handleDelete}>
+                Delete
+              </Button>
+            </div>
           </div>
         </div>
       </Layout>

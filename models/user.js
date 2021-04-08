@@ -7,7 +7,7 @@ const User = new Schema(
     email: { type: String, required: true },
     password_digest: { type: String, required: true },
     isAdmin: { type: String, default: false },
-    watchlist: [{ type: String }],
+    watchlist: [],
   },
   { timestamps: true }
 );

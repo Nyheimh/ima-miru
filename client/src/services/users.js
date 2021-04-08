@@ -59,3 +59,13 @@ export const addToWatchlist = async (id, showId) => {
     throw error;
   }
 };
+
+export const getUserWatchlist = async (id) => {
+  try {
+    console.log(id)
+    const resp = await api.get(`/users/${id}`)
+    return resp.data
+  } catch (error) {
+    throw error;
+  }
+};

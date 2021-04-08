@@ -83,11 +83,19 @@ const addToWatchlist = async (req, res) => {
     res.status(500).json({ error: error.message })
   }
 }
-
+const getUserWatchlist = async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+    res.json(user.watchlist)
+  } catch (error) {
+    res.status(500).json({ error: error.message })
+  }
+}
 module.exports = {
     signUp,
     signIn,
     verify,
     changePassword,
-    addToWatchlist
+    addToWatchlist,
+    getUserWatchlist
 }
