@@ -60,6 +60,7 @@ const EditShow = (props) => {
           <div className="title-duration">
             <div className="title">
               <input
+                className="title-input"
                 value={show.title}
                 name="title"
                 required
@@ -69,6 +70,7 @@ const EditShow = (props) => {
             </div>
             <div className="duration">
               <input
+                className="duration-input"
                 value={show.duration}
                 name="duration"
                 required
@@ -77,6 +79,7 @@ const EditShow = (props) => {
             </div>
             <div className="plot">
               <textarea
+                className="plot-input"
                 rows="6"
                 type="text"
                 value={show.plot}
@@ -107,57 +110,3 @@ const EditShow = (props) => {
 };
 
 export default EditShow;
-
-{
-  /* <Layout user={props.user}>
-<Form className="show-detail" onSubmit={handleSubmit}>
-
-    <img className="anime-image" src={show.imgURL} alt={show.title} />
-    <div className="detail">
-
-  <Form.Group className="title-duration">
-    <Form.Control
-      className="title"
-      placeholder="Title"
-      value={show.title}
-      name="title"
-      required
-      autoFocus
-      onChange={handleChange}
-      />
-    <Form.Control
-      className="duration"
-      placeholder="Duration"
-      value={show.duration}
-      name="duration"
-      required
-      onChange={handleChange}
-      />
-  </Form.Group>
-  <Form.Group>
-    <Form.Control
-      className="input-image-link"
-      value={show.imgURL}
-      name="imgURL"
-      required
-      onChange={handleChange}
-      />
-  </Form.Group>
-  <Form.Group>
-    <textarea
-      className="plot"
-      rows="6"
-      type="text"
-      value={show.plot}
-      name="plot"
-      required
-      onChange={handleChange}
-      />
-  </Form.Group>
-  <Button type="submit" className="submit-button">
-    Submit
-  </Button>
-      </div>
-</Form>
-</Layout> */
-}
