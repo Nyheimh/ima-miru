@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from 'react'
 // import Card from 'react-bootstrap/Card'
 import './CarouselContainer.css'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css';
 
-const CarouselContainer = ({allShows}) => {
+const CarouselContainer = ({ allShows }) => {
+
+  console.log(allShows)
 
   return (
     <div className="carousel">
       <Carousel
         additionalTransfrom={0}
         arrows
-        autoPlay
+        // autoPlay
         autoPlaySpeed={3500}
         centerMode={false}
-        className=""
+        className="hi"
         containerClass="container-with-dots"
         dotListClass=""
         draggable
@@ -89,54 +91,61 @@ const CarouselContainer = ({allShows}) => {
         slidesToSlide={1}
         swipeable
       >
-        <img
-          className="image"
-          // className="d-block w-100"
-          src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Ffilmdaily.co%2Fwp-content%2Fuploads%2F2020%2F10%2Fboys-over-flowers-anime_lede.jpg"
-          alt="First slide"
-        />
-        <img
-          className="image"
-          // className="d-none d-sm-inline w-100"
-          src="https://m.media-amazon.com/images/I/51wIwhIO6JL._AC_.jpg"
-          alt="Second slide"
-        />
-        <img
-          className="image"
-          // className="d-none d-sm-inline w-100"
-          src="https://m.media-amazon.com/images/I/51wIwhIO6JL._AC_.jpg"
-          alt="Second slide"
-        />
-        <img
-          className="image"
-          // className="d-none d-lg-inline w-100"
-          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.PYswdoFN0qdTRqTcYqLtDwAAAA%26pid%3DApi&f=1"
-          alt="Fourth slide"
-        />
-        <img
-          className="image"
-          // className="d-block w-100"
-          src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Ffilmdaily.co%2Fwp-content%2Fuploads%2F2020%2F10%2Fboys-over-flowers-anime_lede.jpg"
-          alt="First slide"
-        />
-        <img
-          className="image"
-          // className="d-none d-sm-inline w-100"
-          src="https://m.media-amazon.com/images/I/51wIwhIO6JL._AC_.jpg"
-          alt="Second slide"
-        />
-        <img
-          className="image"
-          // className="d-none d-sm-inline w-100"
-          src="https://m.media-amazon.com/images/I/51wIwhIO6JL._AC_.jpg"
-          alt="Second slide"
-        />
-        <img
-          className="image"
-          // className="d-none d-lg-inline w-100"
-          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.PYswdoFN0qdTRqTcYqLtDwAAAA%26pid%3DApi&f=1"
-          alt="Fourth slide"
-        />
+
+        <Link to={`/shows/606e5bab7236f659aa04faac`}>
+          <img className="image"
+            src="http://cdn.shopify.com/s/files/1/0630/8509/products/pst2318vk_grande.jpeg?v=1467482965"
+            alt="Vampire Knight"
+          />
+        </Link>
+        <Link to={`/shows/606e5bab7236f659aa04faad`}>
+          <img className="image"
+            src="https://render.fineartamerica.com/images/rendered/default/poster/8/10/break/images/artworkimages/medium/3/tokyo-ghoul-guerrero-leonore.jpg"
+            alt="Tokyo Ghoul"
+          />
+        </Link>
+        <Link to={`/shows/606e5bab7236f659aa04faaf`}>
+          <img className="image"
+            src="https://m.media-amazon.com/images/M/MV5BZDkzZjZlZmItM2E1OC00Y2M3LTljNGUtYzg4ZTUxNGY3MmNhXkEyXkFqcGdeQXVyMTA3OTEyODI1._V1_.jpg"
+            alt="Elemental Gelade"
+          />
+        </Link>
+        <Link to={`/shows/606e5bab7236f659aa04fab7`}>
+          <img className="image"
+            src="https://images-na.ssl-images-amazon.com/images/I/81dH7-pkjiL._AC_SY679_.jpg"
+            alt="Attack on Titan"
+          />
+        </Link>
+        <Link to={`/shows/606e5bab7236f659aa04fab1`}>
+          <img className="image"
+            src="https://i.pinimg.com/564x/d5/53/66/d5536643c2fb667f8cad981c0af76a4a.jpg"
+            alt="Dragon Ball GT"
+          />
+        </Link>
+        <Link to={`/shows/606e5bab7236f659aa04fab2`}>
+          <img className="image"
+            src="https://m.media-amazon.com/images/M/MV5BZTViMTZlMjgtNjVmZC00NjEzLWJlN2QtMjQ4ZTYxNzBiZmMyXkEyXkFqcGdeQXVyNjc2NjA5MTU@._V1_UY1200_CR85,0,630,1200_AL_.jpg"
+            alt="Parasyte"
+          />
+        </Link>
+        <Link to={`/shows/606e5bab7236f659aa04fab6`}>
+          <img className="image"
+            src="https://images-na.ssl-images-amazon.com/images/I/717aat3l-YL._AC_SL1224_.jpg"
+            alt="One Punch Man"
+          />
+        </Link>
+        <Link to={`/shows/606e5bab7236f659aa04fab3`}>
+          <img className="image"
+            src="https://images-na.ssl-images-amazon.com/images/I/91kjVOEopVL._AC_SL1500_.jpg"
+            alt="My Hero Academia"
+          />
+        </Link>
+        <Link to={`/shows/606e5bab7236f659aa04fab4`}>
+          <img className="image"
+            src="https://images-na.ssl-images-amazon.com/images/I/61Zm2hsRJ0L._AC_SL1024_.jpg"
+            alt="Demon Slayer: Kimetsu no Yaiba"
+          />
+        </Link>
       </Carousel>
     </div>
   )
