@@ -11,19 +11,19 @@
   margin-top: 100px;
   bottom: 0;
   left: 0;
-  background: black;
-  border: chartreuse 3px solid;
-  opacity: 0.8;
+  background-color: rgba(0, 0, 0, 0.99);
+  opacity: 0.6;
+  /* border: chartreuse 3px solid; */
   color: white;
 }
 
 .footer-h5 {
-  border: red 3px solid;
+  /* border: red 3px solid; */
   display: flex;
 }
 
 .footer-link {
-  border: yellow 3px solid;
+  /* border: yellow 3px solid;ç */
   display: inline;
   align-items: stretch;
   justify-content: space-between;
