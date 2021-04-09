@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Layout from "../../components/shared/Layout/Layout";
-import { getShow, deleteShow } from "../../services/shows";
+import { getShow } from "../../services/shows";
 import { addToWatchlist } from "../../services/users";
 import { useParams, useHistory } from "react-router-dom";
 import { Button } from "react-bootstrap";
@@ -9,7 +9,6 @@ import "./ShowDetail.css";
 function ShowDetail({ user, watchlistShows }) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [show, setShow] = useState(null);
-  const [inWatchlist, setInWatchlist] = useState(false);
   const [watchlistButton, setWatchlistButton] = useState("+Watchlist")
   const { id } = useParams();
   const history = useHistory();
@@ -23,27 +22,10 @@ function ShowDetail({ user, watchlistShows }) {
     fetchShow();
   }, [id]);
 
-  useEffect(() => {
-    const checkWatchlist = () => {
-      const show = watchlistShows.find((show) => show.id === id);
-      if (show) {
-        setInWatchlist(true);
-      }
-    };
-    checkWatchlist();
-  }, [id, watchlistShows]);
-
-
   const handleWatchlist = (e) => {
     e.preventDefault();
     addToWatchlist(user.id, show._id);
     setWatchlistButton("added")
-  };
-
-  const handleDelete = (e) => {
-    e.preventDefault();
-    deleteShow(show._id);
-    history.push("/shows");
   };
 
   if (!isLoaded) {
@@ -67,7 +49,6 @@ function ShowDetail({ user, watchlistShows }) {
               {user ? (
                 <Button id="watchlist-button" onClick={handleWatchlist}>
                   {watchlistButton}
-                  {/* +Watchlist */}
                 </Button>
               ) : null}
               <Button
