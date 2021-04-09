@@ -1,17 +1,15 @@
 import { useState, useEffect } from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import { getShow, deleteShow } from "../../services/shows";
-import { useParams, Link, useHistory } from "react-router-dom";
-import {
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
-} from "mdbreact";
+import { addToWatchlist } from "../../services/users";
+import { useParams, useHistory } from "react-router-dom";
+import { Button } from "react-bootstrap";
 import "./ShowDetail.css";
 
-function ShowDetail({ user }) {
+function ShowDetail({ user, watchlistShows }) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [show, setShow] = useState(null);
+  const [inWatchlist, setInWatchlist] = useState(false);
   const { id } = useParams();
   const history = useHistory();
 
@@ -23,6 +21,21 @@ function ShowDetail({ user }) {
     };
     fetchShow();
   }, [id]);
+
+  useEffect(() => {
+    const checkWatchlist = () => {
+      const show = watchlistShows.find((show) => show.id === id);
+      if (show) {
+        setInWatchlist(true);
+      }
+    };
+    checkWatchlist();
+  }, [id, watchlistShows]);
+
+  const handleWatchlist = (e) => {
+    e.preventDefault();
+    addToWatchlist(user.id, show._id);
+  };
 
   const handleDelete = (e) => {
     e.preventDefault();
@@ -37,69 +50,40 @@ function ShowDetail({ user }) {
   return (
     <div>
       <Layout user={user}>
-      
-          <div className="show-detail">
-
-          <div className="card mb-3">
-            <div className="img-top">
-            <img className="card-img-top" src={show.imgURL} alt={show.title} />
+        <div className="show-detail">
+          <img className="anime-image" src={show.imgURL} alt={show.title} />
+          <div className="detail">
+            <div className="info-container">
+              <div className="title">{show.title}</div>
+              <div className="duration">
+                <strong>({`${show.duration}`})</strong>
+              </div>
+              <div className="plot">{show.plot}</div>
             </div>
-            <MDBCardBody cascade className="text-center">
-        <MDBCardTitle>{show.title}</MDBCardTitle>
-        <h5 className="indigo-text">
-          <strong>({`${show.duration}`})</strong>
-        </h5>
-        <MDBCardText>{show.plot}</MDBCardText>
-      </MDBCardBody>
-
-
-            {/* <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit
-              longer.
-              </p>
-              <p class="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-              </p>
-            </div> */}
+            <div className="button-container">
+              {user && !inWatchlist ? (
+                <Button id="watchlist-button" onClick={handleWatchlist}>
+                  +Watchlist
+                </Button>
+              ) : null}
+              <Button
+                id="edit-button"
+                className="edit-button"
+                onClick={() => {
+                  history.push(`/shows/${show._id}/edit`);
+                }}
+              >
+                Edit
+              </Button>
+              <Button id="delete-button" onClick={handleDelete}>
+                Delete
+              </Button>
+            </div>
           </div>
-        
-        <div className="button-container">
-          <button className="edit-button">
-            <Link className="edit-link" to={`/shows/${show._id}/edit`}>
-              Edit
-            </Link>
-          </button>
-          <button className="delete-button" onClick={handleDelete}>
-            Delete
-          </button>
         </div>
-            </div>
       </Layout>
     </div>
   );
 }
 
 export default ShowDetail;
-
-  /* <MDBRow>
-  <MDBCol style={{ maxWidth: "40rem" }}>
-    <MDBCard reverse>
-      <MDBCardImage
-        // cascade
-        // style={{ height: '20rem' }}
-        src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
-        // alt={show.title}
-      />
-      <MDBCardBody cascade className="text-center">
-        <MDBCardTitle>{show.title}</MDBCardTitle>
-        <h5 className="indigo-text">
-          <strong>({`${show.duration}`})</strong>
-        </h5>
-        <MDBCardText>{show.plot}</MDBCardText>
-      </MDBCardBody>
-    </MDBCard>
-  </MDBCol>
-</MDBRow> */

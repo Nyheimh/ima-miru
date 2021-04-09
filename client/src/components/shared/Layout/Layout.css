@@ -1,20 +1,23 @@
-
 /*---------------TAGS---------------*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Shojumaru&display=swap');
 
 .layout {
-    background: url("https://preview.redd.it/a86m3ju4lcc51.png?width=1920&format=png&auto=webp&s=e0c8685989322d3859d85563f9537c0bed5009bd");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url("https://preview.redd.it/a86m3ju4lcc51.png?width=1920&format=png&auto=webp&s=e0c8685989322d3859d85563f9537c0bed5009bd");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  height: 100%;
 }
 
+.layout-children {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
 /*---------------CLASS---------------*/
 
-
-
-
 /*---------------IDs---------------*/
-
-
 
 /*---------------Media Queries---------------*/

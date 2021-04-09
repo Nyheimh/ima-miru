@@ -17,8 +17,8 @@ const CreateShow = (props) => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    console.log(name)
-    console.log(value)
+    console.log(name);
+    console.log(value);
     setShow({
       ...show,
       [name]: value,
@@ -37,7 +37,7 @@ const CreateShow = (props) => {
   return (
     // For whatever reason I can not type in my input field anymore...
     <Layout user={props.user}>
-      <Form className="addSeriesform-container" onSubmit={handleSubmit}>
+      <Form className="addSeries-form-container" onSubmit={handleSubmit}>
         <h2 className="addSeries-form-title">Add Series</h2>
         <Form.Group>
           <Form.Label className="addSeries-form-label">Title</Form.Label>
@@ -49,7 +49,7 @@ const CreateShow = (props) => {
             required
             autoFocus
             onChange={handleChange}
-            // id="form-control"
+            // id="input-title"
           />
         </Form.Group>
         <Form.Group controlId="formBasicEmail">
@@ -62,8 +62,7 @@ const CreateShow = (props) => {
             required
             autoFocus
             onChange={handleChange}
-            // id="form-control"
-
+            // id="input-duration"
           />
         </Form.Group>
         <Form.Group controlId="formBasicEmail">
@@ -76,7 +75,7 @@ const CreateShow = (props) => {
             required
             autoFocus
             onChange={handleChange}
-            // id="form-control"
+            // id="input-image"
           />
         </Form.Group>
         <Form.Group controlId="formBasicEmail">
@@ -86,12 +85,12 @@ const CreateShow = (props) => {
             placeholder="Plot (2-4 sentences)"
             name="plot"
             value={show.plot}
-            rows= "6"
+            rows="6"
             required
             autoFocus
             onChange={handleChange}
             className="form-control"
-            // id="form-control"
+            // id="input-plot"
           />
         </Form.Group>
         <Button type="submit" id="add-button">

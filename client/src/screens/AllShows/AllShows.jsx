@@ -8,7 +8,6 @@ import "./AllShows.css";
 const AllShows = ({ user }) => {
   const [search, setSearch] = useState("");
   const [queriedShows, setQueriedShows] = useState([]);
-  //   const [sortType, setSortType] = useState([])
 
   useEffect(() => {
     const fetchShows = async () => {
@@ -24,26 +23,26 @@ const AllShows = ({ user }) => {
   const filteredImages = queriedShows.filter((val2) => {
     return val2.title.toLowerCase().includes(search.toLowerCase());
   });
-  //2 make your above filter map all the images and then when you type in the field it filters the images//
+  //3 make your above filter map all the images and then when you type in the field it filters the images//
   const showJSX = filteredImages.map((show, index) => (
     <Show _id={show._id} title={show.title} imgURL={show.imgURL} key={index} />
   ));
 
   return (
-    <div>
       <Layout user={user}>
-        All Shows
+        <label id="search">
+        Search: {" "}
         <input
-          id="search"
+        className="search-input"
           type="text"
-          placeholder="search"
+          placeholder="Anime title"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
+          </label>
         <div className="shows">{showJSX}</div>
       </Layout>
-    </div>
   );
 };
 
-export default AllShows;
+export default AllShows

@@ -1,77 +1,149 @@
 import React from 'react'
-import Carousel from 'react-bootstrap/Carousel'
 import './CarouselContainer.css'
-// import { Link } from 'react-router-dom'
+import { useHistory} from 'react-router-dom'
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css';
 
-//BACK TO NORMAL!
+const CarouselContainer = ({ allShows }) => {
+  const history = useHistory()
 
-const CarouselContainer = () => {
+  const onSelect = (title) => {
+    const selectedShow = allShows.find(show => show.title === title)
+    history.push(`/shows/${selectedShow._id}`)
+  }
 
-  // console.log(allShows)
+  return (
+    <div className="carousel">
+      <Carousel
+        additionalTransfrom={0}
+        arrows
+        autoPlay
+        autoPlaySpeed={3500}
+        centerMode={false}
+        className=""
+        containerClass="container-with-dots"
+        dotListClass=""
+        draggable
+        focusOnSelect={false}
+        infinite
+        itemClass="item"
+        keyBoardControl
+        minimumTouchDrag={80}
+        renderButtonGroupOutside={false}
+        renderDotsOutside={false}
+        responsive={{
+          mobile: {
+            breakpoint: {
+              max: 767,
+              min: 0
+            },
+            items: 1,
+            partialVisibilityGutter: 30
+          },
+          tablet: {
+            breakpoint: {
+              max: 1299,
+              min: 768
+            },
+            items: 2,
+            partialVisibilityGutter: 30
+          },
+          desktop: {
+            breakpoint: {
+              max: 1800,
+              min: 1300
+            },
+            items: 3,
+            partialVisibilityGutter: 40
+          },
+          desktop2: {
+            breakpoint: {
+              max: 2000,
+              min: 1801
+            },
+            items: 4,
+            partialVisibilityGutter: 40
+          },
+          desktop3: {
+            breakpoint: {
+              max: 2600,
+              min: 2001
+            },
+            items: 5,
+            partialVisibilityGutter: 40
+          },
+          desktop4: {
+            breakpoint: {
+              max: 3000,
+              min: 2601
+            },
+            items: 6,
+            partialVisibilityGutter: 40
+          },
+          desktop5: {
+            breakpoint: {
+              max: 3800,
+              min: 3001
+            },
+            items: 7,
+            partialVisibilityGutter: 40
+          }
+        }}
+        showDots={true}
+        sliderClass="slide"
+        slidesToSlide={1}
+        swipeable
+      >
 
-    return (
-      <Carousel className="carousel">
-        {/* {allShows.map(show => {
-          {console.log(show.imgURL)}
-          <Carousel.Item>
-            <img
-              className="carouselImg"
-              src={show.imgURL}
-              alt={show.title}
-              />
-            <Carousel.Caption>
-              {/* <h3>Boys Over Flowers</h3>
-              {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        })} */}
+        {/* {carouselImages} */}
 
-        <Carousel.Item >
-        <img
-          className="d-block w-100"
-          src="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Ffilmdaily.co%2Fwp-content%2Fuploads%2F2020%2F10%2Fboys-over-flowers-anime_lede.jpg"
-          alt="First slide"
-          />
-        <Carousel.Caption>
-          {/* <h3>Boys Over Flowers</h3> */}
-          {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://m.media-amazon.com/images/I/51wIwhIO6JL._AC_.jpg"
-          alt="Second slide"
+        <img className="image" onClick={() => { onSelect("Vampire Knight") }}
+          src="http://cdn.shopify.com/s/files/1/0630/8509/products/pst2318vk_grande.jpeg?v=1467482965"
+          alt="Vampire Knight"
         />
-        <Carousel.Caption>
-          {/* <h3>Hunter x Hunter</h3> */}
-          {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e858f0b0-1c68-4459-9031-a39f28fe37bf/dd8958t-09d667a0-cc0d-46f6-b34e-83ec5279bdc2.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZTg1OGYwYjAtMWM2OC00NDU5LTkwMzEtYTM5ZjI4ZmUzN2JmXC9kZDg5NTh0LTA5ZDY2N2EwLWNjMGQtNDZmNi1iMzRlLTgzZWM1Mjc5YmRjMi5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.NhD5Vsyrh5-lojWDkuY0steAUvBeUSDq_KwrQF2VwSc"
-          alt="Third slide"
+
+        <img className="image" onClick={() => { onSelect("Tokyo Ghoul") }}
+          src="https://render.fineartamerica.com/images/rendered/default/poster/8/10/break/images/artworkimages/medium/3/tokyo-ghoul-guerrero-leonore.jpg"
+          alt="Tokyo Ghoul"
         />
-        <Carousel.Caption>
-          {/* <h3>Dragon Ball Z</h3> */}
-          {/* <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
-        </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.PYswdoFN0qdTRqTcYqLtDwAAAA%26pid%3DApi&f=1"
-          alt="Fourth slide"
+
+        <img className="image" onClick={() => { onSelect("Elemental Gelade") }}
+          src="https://m.media-amazon.com/images/M/MV5BZDkzZjZlZmItM2E1OC00Y2M3LTljNGUtYzg4ZTUxNGY3MmNhXkEyXkFqcGdeQXVyMTA3OTEyODI1._V1_.jpg"
+          alt="Elemental Gelade"
         />
-        <Carousel.Caption>
-          {/* <h3>Naruto</h3> */}
-          {/* <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> */}
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-    )
+
+        <img className="image" onClick={() => { onSelect("Attack on Titan") }}
+          src="https://images-na.ssl-images-amazon.com/images/I/81dH7-pkjiL._AC_SY679_.jpg"
+          alt="Attack on Titan"
+        />
+
+        <img className="image" onClick={() => { onSelect("Dragon Ball GT") }}
+          src="https://i.pinimg.com/564x/d5/53/66/d5536643c2fb667f8cad981c0af76a4a.jpg"
+          alt="Dragon Ball GT"
+        />
+
+        <img className="image" onClick={() => { onSelect("Parasyte") }}
+          src="https://images-na.ssl-images-amazon.com/images/I/81Ajzfd4wjL._AC_SL1500_.jpg"
+          alt="Parasyte"
+        />
+
+        <img className="image" onClick={() => { onSelect("One Punch Man") }}
+          src="https://images-na.ssl-images-amazon.com/images/I/717aat3l-YL._AC_SL1224_.jpg"
+          alt="One Punch Man"
+        />
+
+        <img className="image" onClick={() => { onSelect("My Hero Academia") }}
+          src="https://images-na.ssl-images-amazon.com/images/I/91kjVOEopVL._AC_SL1500_.jpg"
+          alt="My Hero Academia"
+        />
+
+        <img className="image" onClick={() => { onSelect("Demon Slayer: Kimetsu no Yaiba") }}
+          src="https://images-na.ssl-images-amazon.com/images/I/61Zm2hsRJ0L._AC_SL1024_.jpg"
+          alt="Demon Slayer: Kimetsu no Yaiba"
+        />
+      </Carousel>
+    </div>
+  )
 }
 
 export default CarouselContainer

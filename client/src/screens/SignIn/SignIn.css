@@ -1,5 +1,5 @@
 .signIn-form-container {
-  width: 50vw;
+  width: 50%;
   height: fit-content;
   padding: 15px 70px;
   margin: 0px auto;
@@ -40,16 +40,11 @@
   margin: 0 2px;
 }
 
-/* *-----------------------------Classes-----------------------------* */
-/* .signIn-form-container {
-  width: 50vw;
-  height: fit-content;
-  padding: 15px 70px;
-  margin: 200px auto;
-  background-color: lightcyan;
-} */
-/* *-----------------------------IDs-----------------------------* */
-/* #cancel-button {
-  margin: 10px; */
-  /* background-color: set to a darker blue; */
-/* } */
+@media only screen and (max-width : 375px) {
+  .signIn-form-container {
+    width: 90%;
+  }
+  .signIn-form-title{
+    font-size: 25px;
+  }
+}
