@@ -47,12 +47,21 @@ const SignIn = (props) => {
     const toggleForm = form.isError ? "danger" : "";
     if (form.isError) {
       return (
-        <Button id="submit-button" type="submit" className={toggleForm} variant="primary">
-            {form.errorMsg}
-          </Button>
+        <Button
+          id="submit-button"
+          type="submit"
+          className={toggleForm}
+          variant="primary"
+        >
+          {form.errorMsg}
+        </Button>
       );
     } else {
-      return <Button id="submit-button" type="submit">Sign In</Button>;
+      return (
+        <Button id="submit-button" type="submit">
+          Sign In
+        </Button>
+      );
     }
   };
 
@@ -61,7 +70,7 @@ const SignIn = (props) => {
   return (
     <Layout user={props.user}>
       <Form className="signIn-form-container" onSubmit={onSignIn}>
-        <h2 className= "signIn-form-title">Welcome</h2>
+        <h2 className="signIn-form-title">Welcome</h2>
         <Form.Group>
           <Form.Label className="form-label">Username</Form.Label>
           <Form.Control
@@ -71,7 +80,6 @@ const SignIn = (props) => {
             value={username}
             placeholder="Username"
             onChange={handleChange}
-
           />
         </Form.Group>
         <Form.Group>
@@ -83,16 +91,16 @@ const SignIn = (props) => {
             type="password"
             placeholder="Password"
             onChange={handleChange}
-
           />
         </Form.Group>
-
         <div className="signIn-buttons">
-        {renderError()}
-        <Link to="/">
-          <Button id="cancel-button" type="submit">Cancel</Button>
+          {renderError()}
+          <Link to="/">
+            <Button id="cancel-button" type="submit">
+              Cancel
+            </Button>
           </Link>
-          </div>
+        </div>
       </Form>
     </Layout>
   );
