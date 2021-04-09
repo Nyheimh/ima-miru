@@ -7,7 +7,7 @@
   grid-gap: 10px;
   width: 70%;
   align-self: center;
-  padding: 20px;
+  padding: 50px 20px;
   justify-content: center;
   position: center;
   background-color: rgba(153, 178, 234, 0.7);
@@ -67,7 +67,7 @@
   align-self: center;
   background-color: #0b4779;
 }
-
+#watchlist-button,
 #edit-button,
 #delete-button {
   font-size: 25px;

@@ -55,7 +55,6 @@ const EditShow = (props) => {
             />
           {/* </label> */}
         </div>
-
         <div className="detail">
           <div className="title-duration">
             <div className="title">

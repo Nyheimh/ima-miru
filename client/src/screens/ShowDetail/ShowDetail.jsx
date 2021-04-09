@@ -67,7 +67,7 @@ function ShowDetail({ user, watchlistShows }) {
               </div>
             {/* </div> */}
             <div className="button-container">
-              {user && !inWatchlist ? <Button className="watchlist-button" onClick={handleWatchlist}>
+              {user && !inWatchlist ? <Button id="watchlist-button" onClick={handleWatchlist}>
                 + Watchlist
               </Button> : null}
               <Button id = "edit-button" className="edit-button">
