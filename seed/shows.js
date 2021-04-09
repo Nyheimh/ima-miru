@@ -29,7 +29,7 @@ const main = async () => {
             "title": "Dragon Ball Z",
             "duration": "1996-2003",
             "plot": "Dragon Ball Z continues the adventures of Son Goku, who, along with his companions, defend the Earth",
-            "imgURL": "https://i.pinimg.com/originals/31/7f/fd/317ffdfd07542eb695117161b1c753c9.jpg"
+            "imgURL": "https://i.pinimg.com/originals/ed/08/3f/ed083f9a7fa6a588e31324260801eed7.jpg"
         },
         {
             "title": "Elemental Gelade",
@@ -53,7 +53,7 @@ const main = async () => {
             "title": "Parasyte",
             "duration": "2014-2015",
             "plot": "A teenager gets infected with a parasite but manages to keep control over it; together they must co-exist and survive.",
-            "imgURL": "https://m.media-amazon.com/images/M/MV5BZTViMTZlMjgtNjVmZC00NjEzLWJlN2QtMjQ4ZTYxNzBiZmMyXkEyXkFqcGdeQXVyNjc2NjA5MTU@._V1_UY1200_CR85,0,630,1200_AL_.jpg"
+            "imgURL": "https://images-na.ssl-images-amazon.com/images/I/81Ajzfd4wjL._AC_SL1500_.jpg"
         }, 
         {
             "title": "My Hero Academia",

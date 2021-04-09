@@ -4,6 +4,9 @@ import { NavLink } from "react-router-dom";
 
 const authenticatedOptions = (
   <>
+    <NavLink to="/watchlist">
+      Watchlist
+    </NavLink>
     <NavLink id ="add-show" to="/create-show">
       Add Show
     </NavLink>

@@ -30,19 +30,19 @@ const AllShows = ({ user }) => {
   ));
 
   return (
-    <div>
       <Layout user={user}>
-        
+        <label id="search">
+        Search: {" "}
         <input
-          id="search"
+        className="search-input"
           type="text"
-          placeholder="search"
+          placeholder="Anime title"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
+          </label>
         <div className="shows">{showJSX}</div>
       </Layout>
-    </div>
   );
 };
 

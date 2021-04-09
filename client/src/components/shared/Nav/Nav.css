@@ -9,8 +9,10 @@
 .nav {
     padding: 10px 20px;
     background-color: rgba(0, 0, 0, 0.5);
-    /* opacity: 0.6; */
-    /* color: white; */
+    /* margin-bottom: 50px; */
+}
+nav {
+  margin-bottom: 5%;
 }
 
 .links {
@@ -25,13 +27,11 @@
 .links :hover {
   text-decoration: none;
 }
+
 .nav a {
   color: white;
 }
 
-a :hover {
-  color: red;
-}
 .userWelcome {
     display: flex;
     justify-content: space-between;
@@ -47,7 +47,6 @@ a :hover {
     display: flex;
     justify-content: space-between;
 }
-
 
 .links a {
     display: inline;
@@ -89,8 +88,8 @@ a :hover {
 @media only screen and (min-width: 1024px) {
 
     .links {
-        font-size: 30px;
-        width: 40%;
+        font-size: 25px;
+        width: 50%;
     }
 
     /* .userWelcome {
@@ -109,7 +108,7 @@ a :hover {
 @media only screen and (min-width: 1366px) {
     .links {
         font-size: 30px;
-        width: 30%;
+        width: 45%;
     }
 
     #appName {
@@ -123,7 +122,6 @@ a :hover {
 @media only screen and (min-width: 1801px) {
     .links {
         font-size: 40px;
-        width: 30%;
     }
 
     #appName {

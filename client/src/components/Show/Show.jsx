@@ -4,10 +4,12 @@ import "./Show.css"
 const Show = ({title, imgURL, _id}) => {
     return (
       <>
-        <div className="product">
+        <div className="show-card">
             <Link to={`/shows/${_id}`}>
-                <img src={imgURL} alt={title} />
-                <p className="title-card"> {title} </p>
+            <img src={imgURL} alt={title} />
+            <div className="testing">
+              <p className="title-card"> {title.length >= 16 ? `${title.substring(0,13)}...` : title} </p>
+            </div>
           </Link>
           </div>
         </>

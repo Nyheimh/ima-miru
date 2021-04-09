@@ -1,38 +1,54 @@
 import React from "react";
-import 'font-awesome/css/font-awesome.min.css';
-import './Footer.css'
+import "font-awesome/css/font-awesome.min.css";
+import "./Footer.css";
 
 const Footer = () => {
   return (
     <div className="footer">
-      {/* <a href="#">
-      <h1> Ima Miru </h1>
-      </a> */}
-      {/* <div className="footer-text">
-      </div> */}
       <div className="footer-links">
-  
-        <h5 className="footer-h5">Developers:</h5>
-      <a class="footer-link" href="https://www.linkedin.com/in/andri-rafti-770b49126/" target="blank"> Andri Rafti
-      <i id="icon" className="fa fa-linkedin" aria-hidden="true"></i>
-      </a>
-      <a class="footer-link" href="https://www.linkedin.com/in/irma-leandre-660313154/" target="blank"> Irma Leandre
-      <i id="icon" className="fa fa-linkedin" aria-hidden="true"></i> 
-      </a>
-      <a class="footer-link" href="https://www.linkedin.com/in/jordanmontero96/" target="blank"> Jordan Montero
-      <i id="icon" className="fa fa-linkedin" aria-hidden="true"></i>
-      </a>
-      <a class="footer-link" href="https://www.linkedin.com/in/nyheimhunter/" target="blank"> Nyheim Hunter
-      <i id="icon" className="fa fa-linkedin" aria-hidden="true"></i>  
-      </a>
+        {/* <h5 className="footer-h5">Created by:</h5> */}
+        <a
+          className="footer-link"
+          href="https://www.linkedin.com/in/andri-rafti-770b49126/"
+          target="blank"
+        >
+          {" "}
+          Andri Rafti
+          <i id="icon" className="fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a
+          className="footer-link"
+          href="https://www.linkedin.com/in/irma-leandre-660313154/"
+          target="blank"
+        >
+          {" "}
+          Irma Leandre
+          <i id="icon" className="fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a
+          className="footer-link"
+          href="https://www.linkedin.com/in/jordanmontero96/"
+          target="blank"
+        >
+          {" "}
+          Jordan Montero
+          <i id="icon" className="fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a
+          className="footer-link"
+          href="https://www.linkedin.com/in/nyheimhunter/"
+          target="blank"
+        >
+          {" "}
+          Nyheim Hunter
+          <i id="icon" className="fa fa-linkedin" aria-hidden="true"></i>
+        </a>
       </div>
     </div>
   );
-}
+};
 
 export default Footer;
-
-
 
 // <MDBFooter className="footer">
 // <MDBContainer fluid className="text-center text-md-left">

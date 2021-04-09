@@ -44,8 +44,24 @@ const EditShow = (props) => {
   return (
     <Layout user={props.user}>
       <Form className="show-detail" onSubmit={handleSubmit}>
-        <div className="image-container">
-          <img className="current-image" src={show.imgURL} alt={show.title} />
+        <img className="anime-image" src={show.imgURL} alt={show.title} />
+        <div className="detail">
+          <div className="info-container">
+            <input
+              className="title-input"
+              value={show.title}
+              name="title"
+              required
+              autoFocus
+              onChange={handleChange}
+            />
+            <input
+              className="duration-input"
+              value={show.duration}
+              name="duration"
+              required
+              onChange={handleChange}
+            />
             <input
               className="image-input"
               value={show.imgURL}
@@ -53,10 +69,42 @@ const EditShow = (props) => {
               required
               onChange={handleChange}
             />
-          {/* </label> */}
-        </div>
+            <textarea
+              className="plot-input"
+              rows="4"
+              type="text"
+              value={show.plot}
+              name="plot"
+              required
+              onChange={handleChange}
+            />
+          </div>
+          <div className="button-container">
+            <Button id="submit-button" type="submit" className="submit-button">
+              Submit
+            </Button>
+            <Link to={`/shows/${show._id}`}>
+              <Button
+                id="cancel-button"
+                type="submit"
+                className="submit-button"
+              >
+                Cancel
+              </Button>
+              </Link>
+            </div>
+          </div>
 
-        <div className="detail">
+          {/* <input
+          className="image-input"
+          value={show.imgURL}
+          name="imgURL"
+          required
+          onChange={handleChange}
+        /> */}
+          {/* </label> */}
+          {/* </div> */}
+          {/* <div className="detail">
           <div className="title-duration">
             <div className="title">
               <input
@@ -86,10 +134,10 @@ const EditShow = (props) => {
                 name="plot"
                 required
                 onChange={handleChange}
-              />
-            </div>
-          </div>
-          <div className="button-container">
+              /> */}
+          {/* </div> */}
+          {/* </div> */}
+          {/* <div className="button-container">
             <Button id="submit-button" type="submit" className="submit-button">
               Submit Changes
             </Button>
@@ -103,7 +151,7 @@ const EditShow = (props) => {
               </Button>
             </Link>
           </div>
-        </div>
+        </div> */}
       </Form>
     </Layout>
   );

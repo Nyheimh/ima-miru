@@ -32,7 +32,7 @@ const CarouselContainer = ({ allShows }) => {
         autoPlay
         autoPlaySpeed={3500}
         centerMode={false}
-        className="hi"
+        className=""
         containerClass="container-with-dots"
         dotListClass=""
         draggable
@@ -101,7 +101,7 @@ const CarouselContainer = ({ allShows }) => {
             partialVisibilityGutter: 40
           }
         }}
-        showDots={false}
+        showDots={true}
         sliderClass="slide"
         slidesToSlide={1}
         swipeable
@@ -135,7 +135,7 @@ const CarouselContainer = ({ allShows }) => {
         />
 
         <img className="image" onClick={() => { onSelect("Parasyte") }}
-          src="https://m.media-amazon.com/images/M/MV5BZTViMTZlMjgtNjVmZC00NjEzLWJlN2QtMjQ4ZTYxNzBiZmMyXkEyXkFqcGdeQXVyNjc2NjA5MTU@._V1_UY1200_CR85,0,630,1200_AL_.jpg"
+          src="https://images-na.ssl-images-amazon.com/images/I/81Ajzfd4wjL._AC_SL1500_.jpg"
           alt="Parasyte"
         />
 
