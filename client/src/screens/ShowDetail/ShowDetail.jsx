@@ -10,6 +10,7 @@ function ShowDetail({ user, watchlistShows }) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [show, setShow] = useState(null);
   const [inWatchlist, setInWatchlist] = useState(false);
+  const [watchlistButton, setWatchlistButton] = useState("+Watchlist")
   const { id } = useParams();
   const history = useHistory();
 
@@ -32,9 +33,11 @@ function ShowDetail({ user, watchlistShows }) {
     checkWatchlist();
   }, [id, watchlistShows]);
 
+
   const handleWatchlist = (e) => {
     e.preventDefault();
     addToWatchlist(user.id, show._id);
+    setWatchlistButton("added")
   };
 
   const handleDelete = (e) => {
@@ -63,7 +66,8 @@ function ShowDetail({ user, watchlistShows }) {
             <div className="button-container">
               {user && !inWatchlist ? (
                 <Button id="watchlist-button" onClick={handleWatchlist}>
-                  +Watchlist
+                  {watchlistButton}
+                  {/* +Watchlist */}
                 </Button>
               ) : null}
               <Button
@@ -74,9 +78,6 @@ function ShowDetail({ user, watchlistShows }) {
                 }}
               >
                 Edit
-              </Button>
-              <Button id="delete-button" onClick={handleDelete}>
-                Delete
               </Button>
             </div>
           </div>

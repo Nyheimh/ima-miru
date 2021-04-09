@@ -62,9 +62,17 @@ export const addToWatchlist = async (id, showId) => {
 
 export const getUserWatchlist = async (id) => {
   try {
-    console.log(id)
     const resp = await api.get(`/users/${id}`)
     return resp.data
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const deleteFromWatchlist = async (id, showId) => {
+  try {
+    const resp = await api.delete(`/users/${id}/remove-from-watchlist/${showId}`);
+    return resp.data;
   } catch (error) {
     throw error;
   }
