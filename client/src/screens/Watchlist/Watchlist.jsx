@@ -2,12 +2,11 @@ import Layout from "../../components/shared/Layout/Layout";
 import "./Watchlist.css";
 import Show from "../../components/Show/Show";
 import { useState, useEffect } from "react";
-import { getUserWatchlist, deleteFromWatchlist } from "../../services/users";
+import { getUserWatchlist } from "../../services/users";
 import "./Watchlist.css";
 
 const Watchlist = ({ user, watchlistShows, setWatchlistShows }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  // const [showId, setShowId] = useState("")
 
   useEffect(() => {
     const fetchWatchlist = async () => {
@@ -18,14 +17,6 @@ const Watchlist = ({ user, watchlistShows, setWatchlistShows }) => {
     fetchWatchlist();
   }, [setWatchlistShows, user.id]);
 
-  // console.log("Not in removeShow func:", user.id, showId )
-
-  // const removeShow = async () => {
-  //   console.log("In removeshow func:", user.id, showId )
-  //   const shows = await deleteFromWatchlist(user.id, showId)
-  //   console.log(shows)
-  //   setWatchlistShows(shows);
-  // }
 
   const showJSX = watchlistShows.map((show, index) => (
     <Show
@@ -34,9 +25,6 @@ const Watchlist = ({ user, watchlistShows, setWatchlistShows }) => {
       imgURL={show.imgURL}
       user={user}
       setWatchlistShows={setWatchlistShows}
-      // removeShow={removeShow}
-      // showId={showId}
-      // setShowId={setShowId}
       key={index} />
   ));
 
