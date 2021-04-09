@@ -95,8 +95,6 @@ const CarouselContainer = ({ allShows }) => {
         swipeable
       >
 
-        {/* {carouselImages} */}
-
         <img className="image" onClick={() => { onSelect("Vampire Knight") }}
           src="http://cdn.shopify.com/s/files/1/0630/8509/products/pst2318vk_grande.jpeg?v=1467482965"
           alt="Vampire Knight"
