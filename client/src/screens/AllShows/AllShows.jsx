@@ -30,10 +30,9 @@ const AllShows = ({ user }) => {
   ));
 
   return (
-    <div>
       <Layout user={user}>
         <label id="search">
-        Search for a show: {" "}
+        Search: {" "}
         <input
         className="search-input"
           type="text"
@@ -44,7 +43,6 @@ const AllShows = ({ user }) => {
           </label>
         <div className="shows">{showJSX}</div>
       </Layout>
-    </div>
   );
 };
 
