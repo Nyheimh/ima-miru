@@ -49,7 +49,7 @@ const CreateShow = (props) => {
             required
             autoFocus
             onChange={handleChange}
-            id="input-title"
+            // id="input-title"
           />
         </Form.Group>
         <Form.Group controlId="formBasicEmail">
@@ -62,7 +62,7 @@ const CreateShow = (props) => {
             required
             autoFocus
             onChange={handleChange}
-            id="input-duration"
+            // id="input-duration"
           />
         </Form.Group>
         <Form.Group controlId="formBasicEmail">
@@ -75,7 +75,7 @@ const CreateShow = (props) => {
             required
             autoFocus
             onChange={handleChange}
-            id="input-image"
+            // id="input-image"
           />
         </Form.Group>
         <Form.Group controlId="formBasicEmail">
@@ -90,7 +90,7 @@ const CreateShow = (props) => {
             autoFocus
             onChange={handleChange}
             className="form-control"
-            id="input-plot"
+            // id="input-plot"
           />
         </Form.Group>
         <Button type="submit" id="add-button">

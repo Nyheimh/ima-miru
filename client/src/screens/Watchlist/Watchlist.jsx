@@ -16,7 +16,7 @@ const Watchlist = ({ user, watchlistShows, setWatchlistShows }) => {
       setIsLoaded(true);
     };
     fetchWatchlist();
-  }, []);
+  }, [setWatchlistShows, user.id]);
   
   const showJSX = watchlistShows.map((show, index) => (
     <Show _id={show._id} title={show.title} imgURL={show.imgURL} key={index} />
