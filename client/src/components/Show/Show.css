@@ -4,17 +4,14 @@
   margin: 20px 30px;
   background-color: rgba(153, 178, 234, .7);
   box-shadow:  black 4px 4px 10px;
-  /* width: 10vh; */
-  /* height: 20vw; */
+
 }
 
 .show-card :hover {
   transform: scale(1.02);
-  /* opacity: 1; */
 }
 
 .show-card img {
-  /* min-width: 100%; */
   width: 300px;
   background-size: cover;
   height: 300px;

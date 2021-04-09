@@ -1,28 +1,16 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './CarouselContainer.css'
-import { useHistory, Link} from 'react-router-dom'
+import { useHistory} from 'react-router-dom'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css';
 
 const CarouselContainer = ({ allShows }) => {
   const history = useHistory()
-  const [carouselImages, setCarouselImages] = useState([])
 
   const onSelect = (title) => {
     const selectedShow = allShows.find(show => show.title === title)
     history.push(`/shows/${selectedShow._id}`)
   }
-
-  // allShows.map(show => {
-  //   setCarouselImages.push(
-  //     <Link to={`/shows/${show._id}`} className="image">
-  //       <img 
-  //         src={show.plot}
-  //         alt={show.title}
-  //       />
-  //     </Link>
-  //   )
-  // })
 
   return (
     <div className="carousel">

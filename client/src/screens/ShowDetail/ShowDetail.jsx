@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import { getShow, deleteShow } from "../../services/shows";
-import { addToWatchlist, getUserWatchlist } from "../../services/users";
-import { useParams, Link, useHistory, useLocation } from "react-router-dom";
+import { addToWatchlist } from "../../services/users";
+import { useParams, useHistory } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import "./ShowDetail.css";
 
@@ -12,7 +12,6 @@ function ShowDetail({ user, watchlistShows }) {
   const [inWatchlist, setInWatchlist] = useState(false);
   const { id } = useParams();
   const history = useHistory();
-  const location = useLocation();
 
   useEffect(() => {
     const fetchShow = async () => {
@@ -32,7 +31,7 @@ function ShowDetail({ user, watchlistShows }) {
       }
     };
     checkWatchlist();
-  }, []);
+  }, [id, watchlistShows]);
   
 
   const handleWatchlist = (e) => {
