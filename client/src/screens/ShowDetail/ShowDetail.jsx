@@ -57,7 +57,6 @@ function ShowDetail({ user, watchlistShows }) {
         <div className="show-detail">
           <img className="anime-image" src={show.imgURL} alt={show.title} />
           <div className="detail">
-            {/* <div className="block"> */}
               <div className="info-container">
                 <div className="title">{show.title}</div>
                 <div className="duration">
@@ -65,15 +64,14 @@ function ShowDetail({ user, watchlistShows }) {
                 </div>
                   <div className="plot">{show.plot}</div>
               </div>
-            {/* </div> */}
             <div className="button-container">
               {user && !inWatchlist ? <Button id="watchlist-button" onClick={handleWatchlist}>
-                + Watchlist
+                +Watchlist
               </Button> : null}
-              <Button id = "edit-button" className="edit-button">
-                <Link className="edit-link" to={`/shows/${show._id}/edit`}>
+              <Button id="edit-button" className="edit-button" onClick={() => { history.push(`/shows/${show._id}/edit`) }}  >
+                {/* <Link className="edit-link" to={`/shows/${show._id}/edit`}> */}
                   Edit
-                </Link>
+                {/* </Link> */}
               </Button>
               <Button id="delete-button" onClick={handleDelete}>
                 Delete
