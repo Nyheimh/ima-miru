@@ -8,10 +8,10 @@
   /* height: 20vw; */
 }
 
-/* .show-card :hover {
+.show-card :hover {
   transform: scale(1.02);
-  opacity: 1;
-} */
+  /* opacity: 1; */
+}
 
 .show-card img {
   /* min-width: 100%; */
