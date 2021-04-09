@@ -8,7 +8,6 @@ import "./AllShows.css";
 const AllShows = ({ user }) => {
   const [search, setSearch] = useState("");
   const [queriedShows, setQueriedShows] = useState([]);
-  //   const [sortType, setSortType] = useState([])
 
   useEffect(() => {
     const fetchShows = async () => {
@@ -45,23 +44,5 @@ const AllShows = ({ user }) => {
       </Layout>
   );
 };
-
-  
-
-//     return (
-//         <div>  
-//             <Layout user = {user}>
-          
-//                 <input id="search" type="text" placeholder="search" value={search} onChange={(e) => setSearch(e.target.value)} />
-          
-//           <div className="shows">
-            
-//               {showJSX}
-             
-//                 </div>
-//             </Layout>
-//         </div>
-//     )
-// }
 
 export default AllShows

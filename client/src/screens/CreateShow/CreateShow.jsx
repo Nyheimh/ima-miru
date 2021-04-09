@@ -17,8 +17,8 @@ const CreateShow = (props) => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    console.log(name)
-    console.log(value)
+    console.log(name);
+    console.log(value);
     setShow({
       ...show,
       [name]: value,
@@ -85,7 +85,7 @@ const CreateShow = (props) => {
             placeholder="Plot (2-4 sentences)"
             name="plot"
             value={show.plot}
-            rows= "6"
+            rows="6"
             required
             autoFocus
             onChange={handleChange}

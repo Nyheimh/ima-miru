@@ -22,9 +22,7 @@ function App() {
     //this useeffect allows the user to persist even after a page reload
     const fetchUser = async () => {
       const user = await verifyUser(); //this checks if there is a user by chacking the localstorage
-      console.log(user);
       setUser(user);
-      // user ? setUser(user) : setUser(null)    //then sets user according based on the response we recieve, true or false
     };
     fetchUser();
   }, []);
@@ -53,8 +51,7 @@ function App() {
           <AllShows user={user} />
         </Route>
         <Route exact path="/shows/:id">
-          {/* {user ? <ShowDetail user={user} /> : <ShowDetail user={user} />} */}
-          <ShowDetail user={user} watchlistShows={watchlistShows}/>
+          <ShowDetail user={user} watchlistShows={watchlistShows} />
         </Route>
         <Route path="/create-show">
           {user ? <CreateShow user={user} /> : <Redirect to="/sign-up" />}
@@ -63,7 +60,15 @@ function App() {
           {user ? <EditShow user={user} /> : <Redirect to="/" />}
         </Route>
         <Route exact path="/watchlist">
-          {user ? <Watchlist user={user} watchlistShows={watchlistShows} setWatchlistShows={setWatchlistShows}/> : <Redirect to="/"/>}
+          {user ? (
+            <Watchlist
+              user={user}
+              watchlistShows={watchlistShows}
+              setWatchlistShows={setWatchlistShows}
+            />
+          ) : (
+            <Redirect to="/" />
+          )}
         </Route>
       </Switch>
     </div>

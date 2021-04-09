@@ -47,12 +47,21 @@ const SignUp = (props) => {
     const toggleForm = form.isError ? "danger" : "";
     if (form.isError) {
       return (
-        <Button id="submit-button" type="submit" className={toggleForm} variant="primary">
+        <Button
+          id="submit-button"
+          type="submit"
+          className={toggleForm}
+          variant="primary"
+        >
           {form.errorMsg}
         </Button>
       );
     } else {
-      return <Button id="submit-button" type="submit">Sign Up</Button>;
+      return (
+        <Button id="submit-button" type="submit">
+          Sign Up
+        </Button>
+      );
     }
   };
 
@@ -61,7 +70,7 @@ const SignUp = (props) => {
   return (
     <Layout user={props.user}>
       <Form className="signUp-form-container" onSubmit={onSignUp}>
-        <h2 className= "signUp-form-title">Create your account below!</h2>
+        <h2 className="signUp-form-title">Create your account below!</h2>
         <Form.Group>
           <Form.Label className="form-label">Create Username</Form.Label>
           <Form.Control
@@ -107,15 +116,15 @@ const SignUp = (props) => {
           />
         </Form.Group>
         <div className="signUp-buttons">
-        {renderError()}
-        <Link to="/">
-          <Button id="cancel-button" type="submit">Cancel</Button>
-        </Link>
+          {renderError()}
+          <Link to="/">
+            <Button id="cancel-button" type="submit">
+              Cancel
+            </Button>
+          </Link>
         </div>
         <Link id="text-muted" to="/sign-in">
-        <Form.Text>
-          Already have an account? Click here to sign in.
-        </Form.Text>
+          <Form.Text>Already have an account? Click here to sign in.</Form.Text>
         </Link>
       </Form>
     </Layout>

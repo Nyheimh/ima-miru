@@ -16,7 +16,6 @@ function ShowDetail({ user, watchlistShows }) {
   useEffect(() => {
     const fetchShow = async () => {
       const anime = await getShow(id);
-      console.log(anime)
       setShow(anime);
       setIsLoaded(true);
     };
@@ -25,18 +24,16 @@ function ShowDetail({ user, watchlistShows }) {
 
   useEffect(() => {
     const checkWatchlist = () => {
-      const show = watchlistShows.find(show => (show.id === id))
+      const show = watchlistShows.find((show) => show.id === id);
       if (show) {
-        setInWatchlist(true)
+        setInWatchlist(true);
       }
     };
     checkWatchlist();
   }, [id, watchlistShows]);
-  
 
   const handleWatchlist = (e) => {
     e.preventDefault();
-    console.log(user.id, show._id);
     addToWatchlist(user.id, show._id);
   };
 
@@ -56,21 +53,27 @@ function ShowDetail({ user, watchlistShows }) {
         <div className="show-detail">
           <img className="anime-image" src={show.imgURL} alt={show.title} />
           <div className="detail">
-              <div className="info-container">
-                <div className="title">{show.title}</div>
-                <div className="duration">
-                  <strong>({`${show.duration}`})</strong>
-                </div>
-                  <div className="plot">{show.plot}</div>
+            <div className="info-container">
+              <div className="title">{show.title}</div>
+              <div className="duration">
+                <strong>({`${show.duration}`})</strong>
               </div>
+              <div className="plot">{show.plot}</div>
+            </div>
             <div className="button-container">
-              {user && !inWatchlist ? <Button id="watchlist-button" onClick={handleWatchlist}>
-                +Watchlist
-              </Button> : null}
-              <Button id="edit-button" className="edit-button" onClick={() => { history.push(`/shows/${show._id}/edit`) }}  >
-                {/* <Link className="edit-link" to={`/shows/${show._id}/edit`}> */}
-                  Edit
-                {/* </Link> */}
+              {user && !inWatchlist ? (
+                <Button id="watchlist-button" onClick={handleWatchlist}>
+                  +Watchlist
+                </Button>
+              ) : null}
+              <Button
+                id="edit-button"
+                className="edit-button"
+                onClick={() => {
+                  history.push(`/shows/${show._id}/edit`);
+                }}
+              >
+                Edit
               </Button>
               <Button id="delete-button" onClick={handleDelete}>
                 Delete

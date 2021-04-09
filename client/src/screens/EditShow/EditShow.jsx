@@ -91,67 +91,9 @@ const EditShow = (props) => {
               >
                 Cancel
               </Button>
-              </Link>
-            </div>
-          </div>
-
-          {/* <input
-          className="image-input"
-          value={show.imgURL}
-          name="imgURL"
-          required
-          onChange={handleChange}
-        /> */}
-          {/* </label> */}
-          {/* </div> */}
-          {/* <div className="detail">
-          <div className="title-duration">
-            <div className="title">
-              <input
-                className="title-input"
-                value={show.title}
-                name="title"
-                required
-                autoFocus
-                onChange={handleChange}
-              />
-            </div>
-            <div className="duration">
-              <input
-                className="duration-input"
-                value={show.duration}
-                name="duration"
-                required
-                onChange={handleChange}
-              />
-            </div>
-            <div className="plot">
-              <textarea
-                className="plot-input"
-                rows="6"
-                type="text"
-                value={show.plot}
-                name="plot"
-                required
-                onChange={handleChange}
-              /> */}
-          {/* </div> */}
-          {/* </div> */}
-          {/* <div className="button-container">
-            <Button id="submit-button" type="submit" className="submit-button">
-              Submit Changes
-            </Button>
-            <Link to={`/shows/${show._id}`}>
-              <Button
-                id="cancel-button"
-                type="submit"
-                className="submit-button"
-              >
-                Cancel
-              </Button>
             </Link>
           </div>
-        </div> */}
+        </div>
       </Form>
     </Layout>
   );
