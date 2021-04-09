@@ -24,7 +24,7 @@ const Show = ({title, user, imgURL, _id, setWatchlistShows}) => {
             <img src={imgURL} alt={title} />
             <div className="testing">
               <p className="title-card"> {title.length >= 16 ? `${title.substring(0,13)}...` : title} </p>
-              {location.pathname === "/watchlist" ? <button onClick={(e)=>handleRemove(e)}>Remove</button> : null}
+              {location.pathname === "/watchlist" ? <button className="delete-button" onClick={(e)=>handleRemove(e)}>Remove</button> : null}
             </div>
           </Link>
           </div>

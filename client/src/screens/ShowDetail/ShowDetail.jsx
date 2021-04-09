@@ -64,7 +64,7 @@ function ShowDetail({ user, watchlistShows }) {
               <div className="plot">{show.plot}</div>
             </div>
             <div className="button-container">
-              {user && !inWatchlist ? (
+              {user ? (
                 <Button id="watchlist-button" onClick={handleWatchlist}>
                   {watchlistButton}
                   {/* +Watchlist */}
